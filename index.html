@@ -1,0 +1,1980 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Click Publish</title>
+<script>window.__resources={"https://unpkg.com/react@18.3.1/umd/react.production.min.js":"./vendor/react.production.min.js","https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js":"./vendor/react-dom.production.min.js"};</script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Yellowtail&amp;family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#8FB8E8;font-family:'Archivo',sans-serif;}
+  a{color:#E0532F;text-decoration:none;} a:hover{color:#B93F1F;text-decoration:underline;}
+  *{box-sizing:border-box;}
+  input,textarea,select{font-family:'Archivo',sans-serif;}
+  input:focus,textarea:focus{outline:2px solid #E0532F;outline-offset:1px;}
+  ::-webkit-scrollbar{width:0;height:0;}
+  @keyframes cpGlow{0%,100%{text-shadow:0 0 18px rgba(250,231,140,.95),0 0 60px rgba(250,231,140,.55);}50%{text-shadow:0 0 30px rgba(250,231,140,1),0 0 90px rgba(250,231,140,.8);}}
+  @keyframes cpFloat{0%,100%{transform:translateY(0) rotate(-2deg);}50%{transform:translateY(-10px) rotate(2deg);}}
+  @keyframes cpJitter{0%{transform:rotate(-1.6deg);}50%{transform:rotate(1.4deg);}100%{transform:rotate(-1.6deg);}}
+  @keyframes cpPop{0%{transform:scale(.2) rotate(-14deg);opacity:0;}100%{transform:scale(1) rotate(0deg);opacity:1;}}
+  @keyframes cpRocket{0%{transform:translateY(60vh) rotate(-4deg);}100%{transform:translateY(-120vh) rotate(3deg);}}
+  @keyframes cpBullet{0%{transform:translateY(40vh) scale(1);}100%{transform:translateY(-130vh) scale(.5);}}
+  @keyframes cpTiltSky{0%{transform:translateY(0);}100%{transform:translateY(46%);}}
+  @keyframes cpDrive{0%{transform:translateX(-130%) rotate(-1deg);}100%{transform:translateX(130%) rotate(1deg);}}
+  @keyframes cpSlideUp{0%{transform:translateY(28px);opacity:0;}100%{transform:translateY(0);opacity:1;}}
+  @keyframes cpConfetti{0%{transform:translateY(-10%) rotate(0deg);opacity:1;}100%{transform:translateY(110vh) rotate(720deg);opacity:.7;}}
+  @keyframes cpFlash{0%{opacity:.9;}100%{opacity:0;}}
+  @keyframes cpIris{0%{clip-path:circle(120% at 50% 50%);}100%{clip-path:circle(0% at 50% 50%);}}
+  @keyframes cpIrisIn{0%{clip-path:circle(0% at 50% 50%);}100%{clip-path:circle(120% at 50% 50%);}}
+  @keyframes cpMarquee{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+  @keyframes cpStamp{0%{transform:scale(2.4) rotate(-18deg);opacity:0;}60%{transform:scale(.92) rotate(-7deg);opacity:1;}100%{transform:scale(1) rotate(-8deg);opacity:1;}}
+  @keyframes cpPlane{0%{transform:translate(-280px,36px) rotate(12deg);}100%{transform:translate(280px,-44px) rotate(-9deg);}}
+  @keyframes cpSunrise{0%{transform:translateY(70vh) scale(.7) rotate(-8deg);}100%{transform:translateY(0) scale(1) rotate(0deg);}}
+  @keyframes cpFlashbulb{0%,20%,45%,70%{opacity:0;}10%,35%,60%{opacity:.85;}100%{opacity:0;}}
+  @keyframes cpDriftSlow{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+  @keyframes cpSmokeCycle{0%,19%{opacity:.95;}20%,100%{opacity:0;}}
+</style>
+</helmet>
+
+<div data-screen-label="Click Publish" style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:34px 16px;background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_182045_ca43f9bb-f0d2-4a06-8d08-52dc89a5d279.png');background-size:cover;background-position:center;">
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.js" hint-size="430px,880px">
+<div style="position:relative;width:100%;height:100%;overflow:hidden;background:#F3EDE1;display:flex;flex-direction:column;font-family:'Archivo',sans-serif;color:#201D1A;">
+
+  <!-- ============ SPLASH ============ -->
+  <sc-if value="{{ isSplash }}" hint-placeholder-val="{{ true }}">
+    <div data-screen-label="Splash" onClick="{{ startApp }}" style="position:absolute;inset:0;cursor:pointer;background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_182045_ca43f9bb-f0d2-4a06-8d08-52dc89a5d279.png');background-size:cover;background-position:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;animation:cpIrisIn .9s steps(9) both;">
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184323_26d245c4-7809-43c7-9614-d64df798b93a.png" alt="" style="position:absolute;top:54px;right:-16px;width:120px;animation:cpDriftSlow 8s ease-in-out infinite;filter:drop-shadow(0 6px 8px rgba(32,29,26,.25));pointer-events:none;">
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184337_7b89348a-3388-4d7c-9d76-42ed4113486c.png" alt="" style="position:absolute;top:120px;left:-22px;width:110px;animation:cpFloat 7s ease-in-out infinite;filter:drop-shadow(0 5px 7px rgba(32,29,26,.2));pointer-events:none;">
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184329_632524bf-ba57-4e16-9059-5413dd96c43a.png" alt="" style="position:absolute;bottom:-12px;left:0;width:110%;max-width:none;filter:drop-shadow(0 -4px 8px rgba(32,29,26,.18));pointer-events:none;">
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse 90% 55% at 50% 46%,rgba(30,52,80,.62) 0%,rgba(30,52,80,.28) 55%,rgba(30,52,80,0) 78%);pointer-events:none;"></div>
+      <div style="font-family:'Yellowtail',cursive;font-size:30px;color:#FDF6DC;text-shadow:0 2px 6px rgba(20,30,45,.85),0 2px 14px rgba(20,30,45,.5);transform:rotate(-4deg);animation:cpPop .5s steps(5) .3s both,cpFloat 4s ease-in-out 1.1s infinite;">Clear Sky presents</div>
+      <div style="font-family:'Anton',sans-serif;font-size:64px;line-height:.95;text-align:center;color:#FAE78C;letter-spacing:2px;filter:drop-shadow(0 4px 5px rgba(20,30,45,.75));animation:cpPop .55s steps(6) .6s both,cpGlow 3.4s ease-in-out 1.2s infinite;">CLICK<br>PUBLISH</div>
+      <div style="margin-top:6px;background:#F3EDE1;color:#201D1A;font-weight:700;font-size:13px;letter-spacing:2px;padding:12px 22px;transform:rotate(-2deg);box-shadow:0 4px 0 rgba(32,29,26,.25);clip-path:polygon(2% 12%,10% 2%,24% 10%,38% 1%,53% 9%,68% 2%,82% 10%,97% 3%,100% 88%,90% 99%,74% 91%,58% 100%,42% 92%,26% 100%,10% 92%,0 99%);animation:cpPop .5s steps(5) 1.05s both,cpJitter 1.2s steps(2) 1.7s infinite;">TAP TO ROLL FILM ▸</div>
+      <div style="position:absolute;bottom:26px;left:0;right:0;text-align:center;font-size:11px;letter-spacing:3px;color:#FDF6DC;font-weight:700;text-shadow:0 1px 5px rgba(20,30,45,.85);animation:cpPop .5s steps(5) 1.35s both;">A CREATIVE CREATORS ACCOUNTABILITY PICTURE</div>
+    </div>
+  </sc-if>
+
+  <!-- ============ CREATE ACCOUNT ============ -->
+  <sc-if value="{{ isAuth }}" hint-placeholder-val="{{ false }}">
+    <div data-screen-label="Create Account" style="position:absolute;inset:0;background:linear-gradient(180deg,#8FB8E8 0%,#A9C9EE 55%,#F3EDE1 55.2%);display:flex;flex-direction:column;padding:62px 24px 24px;animation:cpSlideUp .5s steps(6) both;">
+      <div style="font-family:'Yellowtail',cursive;font-size:26px;color:#FDF6DC;transform:rotate(-3deg);">your name in lights</div>
+      <div style="font-family:'Anton',sans-serif;font-size:40px;color:#FAE78C;letter-spacing:1px;filter:drop-shadow(0 3px 4px rgba(20,30,45,.55));animation:cpGlow 3.4s ease-in-out infinite;">{{ authTitle }}</div>
+      <div style="font-size:13.5px;font-weight:600;color:#2E4A6B;margin-top:6px;max-width:280px;">Your road to posting regularly!</div>
+      <div style="margin-top:28px;background:#FDFAF1;padding:20px 18px 22px;transform:rotate(-.6deg);box-shadow:0 6px 0 rgba(32,29,26,.14);clip-path:polygon(1% 4%,9% 1%,22% 5%,36% 0,51% 4%,66% 1%,80% 5%,94% 1%,100% 6%,99% 95%,91% 100%,76% 95%,60% 100%,45% 95%,29% 100%,14% 96%,0 100%);display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="font-size:11px;font-weight:700;letter-spacing:2px;color:#8A6E4B;">STAGE NAME</label>
+          <input value="{{ authName }}" onChange="{{ onAuthName }}" placeholder="e.g. Rae Delgado" style="border:none;border-bottom:2px solid #D9CBAF;background:transparent;font-size:17px;padding:8px 2px;color:#201D1A;">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="font-size:11px;font-weight:700;letter-spacing:2px;color:#8A6E4B;">EMAIL</label>
+          <input value="{{ authEmail }}" onChange="{{ onAuthEmail }}" placeholder="you@example.com" style="border:none;border-bottom:2px solid #D9CBAF;background:transparent;font-size:17px;padding:8px 2px;color:#201D1A;">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="font-size:11px;font-weight:700;letter-spacing:2px;color:#8A6E4B;">PASSWORD</label>
+          <input type="password" value="{{ authPass }}" onChange="{{ onAuthPass }}" placeholder="••••••••" style="border:none;border-bottom:2px solid #D9CBAF;background:transparent;font-size:17px;padding:8px 2px;color:#201D1A;">
+        </div>
+      </div>
+      <button onClick="{{ onCreateAccount }}" style="margin-top:26px;border:none;cursor:pointer;background:{{ authBtnBg }};color:#FDF6DC;font-family:'Anton',sans-serif;font-size:18px;letter-spacing:2px;padding:16px;transform:rotate(.6deg);box-shadow:0 5px 0 rgba(32,29,26,.28);clip-path:polygon(0 14%,8% 3%,23% 12%,39% 2%,54% 11%,70% 3%,85% 12%,100% 5%,100% 86%,92% 98%,76% 89%,60% 99%,44% 90%,28% 99%,12% 90%,0 98%);">LET'S CREATE ✎</button>
+      <div style="margin-top:auto;display:flex;justify-content:center;"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184214_3f9c4fbf-2a7c-441b-9adb-96cead270281.png" alt="camera" style="width:150px;transform:rotate(4deg);animation:cpFloat 5s ease-in-out infinite;filter:drop-shadow(0 8px 10px rgba(32,29,26,.25));"></div>
+    </div>
+  </sc-if>
+
+  <!-- ============ ONBOARDING QUIZ ============ -->
+  <sc-if value="{{ isQuiz }}" hint-placeholder-val="{{ false }}">
+    <div data-screen-label="Onboarding Quiz" style="position:absolute;inset:0;overflow:hidden;display:flex;flex-direction:column;padding:62px 22px 26px;background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_182045_ca43f9bb-f0d2-4a06-8d08-52dc89a5d279.png');background-size:cover;background-position:center;">
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184323_26d245c4-7809-43c7-9614-d64df798b93a.png" alt="" style="position:absolute;top:88px;right:-14px;width:104px;transform:translateX({{ sunX }});transition:transform 1s steps(10);animation:cpDriftSlow 9s ease-in-out infinite;pointer-events:none;filter:drop-shadow(0 5px 7px rgba(32,29,26,.22));">
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184337_7b89348a-3388-4d7c-9d76-42ed4113486c.png" alt="" style="position:absolute;top:118px;left:-8px;width:88px;opacity:.95;transform:translateX({{ cloudFarX }});transition:transform 1s steps(10);pointer-events:none;filter:drop-shadow(0 4px 6px rgba(32,29,26,.18));">
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184337_7b89348a-3388-4d7c-9d76-42ed4113486c.png" alt="" style="position:absolute;top:60px;left:44%;width:64px;opacity:.8;transform:translateX({{ cloudNearX }}) scaleX(-1);transition:transform 1s steps(10);pointer-events:none;">
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184329_632524bf-ba57-4e16-9059-5413dd96c43a.png" alt="" style="position:absolute;bottom:-14px;left:0;width:150%;max-width:none;transform:translateX({{ hillsX }});transition:transform 1s steps(10);pointer-events:none;filter:drop-shadow(0 -4px 8px rgba(32,29,26,.18));">
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184325_9da72c03-9994-4761-847a-f14e835eb987.png" alt="" style="position:absolute;bottom:-10px;left:-30px;width:140px;transform:translateX({{ palmX }});transition:transform 1s steps(10);pointer-events:none;filter:drop-shadow(0 6px 8px rgba(32,29,26,.25));z-index:3;">
+      {{ planeEl }}
+      <div style="display:flex;align-items:center;gap:10px;position:relative;z-index:2;">
+        <div style="flex:1;height:10px;background:rgba(243,237,225,.25);border-radius:99px;overflow:hidden;"><div style="height:100%;width:{{ qPct }};background:#E0532F;border-radius:99px;transition:width .5s steps(5);"></div></div>
+        <div style="font-family:'Anton',sans-serif;font-size:14px;color:#F3EDE1;letter-spacing:1px;">TAKE {{ qNum }}/{{ qTotal }}</div>
+      </div>
+      <div style="margin-top:20px;position:relative;z-index:2;background:#FDFAF1;padding:18px 17px 22px;overflow-y:auto;box-shadow:0 7px 0 rgba(32,29,26,.2);clip-path:polygon(1% 3%,8% .5%,20% 2.5%,33% 0,47% 2.5%,61% .5%,74% 2.5%,87% 0,97% 2%,100% 4%,99.5% 96%,93% 99.5%,80% 97%,66% 100%,52% 97.5%,38% 100%,24% 97%,11% 99.5%,.5% 97%,0 94%);animation:cpSlideUp .45s steps(5) both;" key="{{ qKey }}">
+        <div style="font-family:'Yellowtail',cursive;font-size:24px;color:#E0532F;transform:rotate(-2deg);">{{ qKicker }}</div>
+        <div style="font-family:'Anton',sans-serif;font-size:31px;line-height:1.05;color:#201D1A;letter-spacing:.5px;margin-top:4px;">{{ qTitle }}</div>
+        <div style="font-size:13px;color:rgba(32,29,26,.7);margin-top:8px;">{{ qSub }}</div>
+        <sc-if value="{{ qIsNiche }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:9px;margin-top:18px;">
+            <sc-for list="{{ nicheCats }}" as="cat" hint-placeholder-count="4">
+              <div style="background:#F3EDE1;box-shadow:0 3px 0 rgba(32,29,26,.12);transform:rotate({{ cat.tilt }});">
+                <button onClick="{{ cat.onToggle }}" style="width:100%;border:none;cursor:pointer;background:transparent;display:flex;align-items:center;gap:10px;padding:12px 14px;text-align:left;">
+                  <span style="font-size:17px;">{{ cat.emoji }}</span>
+                  <span style="flex:1;font-family:'Anton',sans-serif;font-size:13.5px;letter-spacing:1px;color:#201D1A;">{{ cat.name }}</span>
+                  <span style="font-size:10.5px;font-weight:800;color:#8A6E4B;">{{ cat.count }}</span>
+                  <span style="font-family:'Anton',sans-serif;font-size:13px;color:#E0532F;">{{ cat.caret }}</span>
+                </button>
+                <sc-if value="{{ cat.open }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:flex;flex-wrap:wrap;gap:7px;padding:2px 12px 14px;animation:cpSlideUp .3s steps(4) both;">
+                    <sc-for list="{{ cat.niches }}" as="nch" hint-placeholder-count="6">
+                      <button onClick="{{ nch.onPick }}" style="border:none;cursor:pointer;font-size:12px;font-weight:700;color:#201D1A;background:{{ nch.bg }};padding:7px 11px;border-radius:99px;box-shadow:0 2px 0 rgba(32,29,26,.14);">{{ nch.label }}</button>
+                    </sc-for>
+                  </div>
+                </sc-if>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ qIsCadence }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top:18px;display:flex;flex-direction:column;gap:14px;">
+            <div style="background:#F3EDE1;padding:14px 16px;box-shadow:0 3px 0 rgba(32,29,26,.12);transform:rotate(-.5deg);display:flex;align-items:center;gap:12px;">
+              <span style="flex:1;font-size:12px;font-weight:800;letter-spacing:1.5px;color:#8A6E4B;">📅 DAYS A WEEK</span>
+              <button onClick="{{ onCadDaysMinus }}" style="border:none;cursor:pointer;width:34px;height:34px;border-radius:10px;background:#FDFAF1;font-size:18px;font-weight:800;color:#E0532F;box-shadow:0 2px 0 rgba(32,29,26,.15);">−</button>
+              <span style="font-family:'Anton',sans-serif;font-size:26px;width:34px;text-align:center;color:#201D1A;">{{ cadDays }}</span>
+              <button onClick="{{ onCadDaysPlus }}" style="border:none;cursor:pointer;width:34px;height:34px;border-radius:10px;background:#FDFAF1;font-size:18px;font-weight:800;color:#E0532F;box-shadow:0 2px 0 rgba(32,29,26,.15);">+</button>
+            </div>
+            <div style="background:#F3EDE1;padding:14px 16px;box-shadow:0 3px 0 rgba(32,29,26,.12);transform:rotate(.5deg);display:flex;align-items:center;gap:12px;">
+              <span style="flex:1;font-size:12px;font-weight:800;letter-spacing:1.5px;color:#8A6E4B;">🎬 POSTS A DAY</span>
+              <button onClick="{{ onCadPostsMinus }}" style="border:none;cursor:pointer;width:34px;height:34px;border-radius:10px;background:#FDFAF1;font-size:18px;font-weight:800;color:#E0532F;box-shadow:0 2px 0 rgba(32,29,26,.15);">−</button>
+              <span style="font-family:'Anton',sans-serif;font-size:26px;width:34px;text-align:center;color:#201D1A;">{{ cadPosts }}</span>
+              <button onClick="{{ onCadPostsPlus }}" style="border:none;cursor:pointer;width:34px;height:34px;border-radius:10px;background:#FDFAF1;font-size:18px;font-weight:800;color:#E0532F;box-shadow:0 2px 0 rgba(32,29,26,.15);">+</button>
+            </div>
+            <div style="text-align:center;font-family:'Yellowtail',cursive;font-size:19px;color:#E0532F;">{{ cadSummary }}</div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ qIsTargets }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top:18px;display:flex;flex-direction:column;gap:16px;">
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:11px;font-weight:800;letter-spacing:2px;color:#8A6E4B;">👥 FOLLOWER GOAL (Across accounts)</label>
+              <input value="{{ tFollowers }}" onChange="{{ onTFollowers }}" inputMode="numeric" placeholder="e.g. 10000" style="border:2px solid #D9CBAF;border-radius:10px;background:#F3EDE1;font-family:'Anton',sans-serif;font-size:22px;padding:10px 12px;color:#201D1A;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:11px;font-weight:800;letter-spacing:2px;color:#8A6E4B;">👁 MONTHLY IMPRESSIONS GOAL (Across Accounts)</label>
+              <input value="{{ tImpressions }}" onChange="{{ onTImpressions }}" inputMode="numeric" placeholder="e.g. 100000" style="border:2px solid #D9CBAF;border-radius:10px;background:#F3EDE1;font-family:'Anton',sans-serif;font-size:22px;padding:10px 12px;color:#201D1A;">
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ qIsBaseline }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top:18px;display:flex;flex-direction:column;gap:16px;">
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:11px;font-weight:800;letter-spacing:2px;color:#8A6E4B;">👥 FOLLOWERS TODAY</label>
+              <input value="{{ bFollowers }}" onChange="{{ onBFollowers }}" inputMode="numeric" placeholder="e.g. 850" style="border:2px solid #D9CBAF;border-radius:10px;background:#F3EDE1;font-family:'Anton',sans-serif;font-size:22px;padding:10px 12px;color:#201D1A;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:11px;font-weight:800;letter-spacing:2px;color:#8A6E4B;">👁 IMPRESSIONS LAST MONTH</label>
+              <input value="{{ bImpressions }}" onChange="{{ onBImpressions }}" inputMode="numeric" placeholder="e.g. 12000" style="border:2px solid #D9CBAF;border-radius:10px;background:#F3EDE1;font-family:'Anton',sans-serif;font-size:22px;padding:10px 12px;color:#201D1A;">
+            </div>
+            <div style="font-size:11.5px;color:rgba(32,29,26,.55);">Rough numbers are fine — this is your opening frame, not a report card.</div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ qIsOptions }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;flex-direction:column;gap:11px;margin-top:22px;">
+          <sc-for list="{{ qOptions }}" as="opt" hint-placeholder-count="4">
+            <button onClick="{{ opt.onPick }}" style="border:none;cursor:pointer;text-align:left;display:flex;align-items:center;gap:12px;padding:14px 16px;font-size:15px;font-weight:600;color:#201D1A;background:{{ opt.bg }};transform:rotate({{ opt.tilt }});box-shadow:0 4px 0 rgba(20,35,55,.35);clip-path:polygon(0 18%,5% 4%,16% 14%,28% 2%,41% 12%,54% 3%,67% 13%,80% 4%,92% 12%,100% 6%,100% 84%,94% 97%,82% 87%,69% 98%,56% 88%,43% 98%,30% 88%,17% 97%,6% 88%,0 96%);">
+              <span style="font-size:20px;">{{ opt.emoji }}</span>
+              <span style="flex:1;">{{ opt.label }}</span>
+              <span style="font-family:'Anton',sans-serif;font-size:13px;color:#E0532F;">{{ opt.mark }}</span>
+            </button>
+          </sc-for>
+        </div>
+        </sc-if>
+        <sc-if value="{{ qShowNext }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ qNext }}" style="margin-top:18px;width:100%;border:none;cursor:pointer;background:#E0532F;color:#FDF6DC;font-family:'Anton',sans-serif;font-size:16px;letter-spacing:2px;padding:14px;box-shadow:0 5px 0 rgba(20,35,55,.4);clip-path:polygon(0 14%,8% 3%,23% 12%,39% 2%,54% 11%,70% 3%,85% 12%,100% 5%,100% 86%,92% 98%,76% 89%,60% 99%,44% 90%,28% 99%,12% 90%,0 98%);">THAT'S A WRAP ▸</button>
+        </sc-if>
+      </div>
+      <div style="margin-top:auto;position:relative;z-index:4;text-align:center;font-size:11px;letter-spacing:2px;color:rgba(253,246,220,.95);font-weight:700;text-shadow:0 1px 4px rgba(32,29,26,.4);padding-top:12px;">SCENE {{ qNum }} · CLICK PUBLISH SCREEN TEST</div>
+    </div>
+  </sc-if>
+
+  <!-- ============ PICK CHALLENGE ============ -->
+  <sc-if value="{{ isPick }}" hint-placeholder-val="{{ false }}">
+    <div data-screen-label="Pick Challenge" style="position:absolute;inset:0;background:linear-gradient(180deg,#8FB8E8,#B9D4F0);display:flex;flex-direction:column;padding:62px 22px 24px;overflow-y:auto;animation:cpSlideUp .5s steps(6) both;">
+      <div style="font-family:'Yellowtail',cursive;font-size:25px;color:#FDF6DC;transform:rotate(-2deg);">final scene of setup</div>
+      <div style="font-family:'Anton',sans-serif;font-size:36px;color:#FAE78C;letter-spacing:1px;line-height:1;animation:cpGlow 3.4s ease-in-out infinite;">CHOOSE YOUR<br>CHALLENGE</div>
+      
+      <div style="display:flex;flex-direction:column;gap:13px;margin-top:20px;padding-bottom:20px;">
+        <sc-for list="{{ pickList }}" as="ch" hint-placeholder-count="4">
+          <button onClick="{{ ch.onPick }}" style="border:none;cursor:pointer;text-align:left;background:{{ ch.bg }};color:{{ ch.fg }};padding:16px 18px;transform:rotate({{ ch.tilt }});box-shadow:0 5px 0 rgba(32,29,26,.2);clip-path:polygon(0 12%,6% 2%,17% 10%,29% 1%,42% 9%,55% 2%,68% 10%,81% 2%,93% 9%,100% 4%,100% 88%,94% 98%,83% 90%,70% 99%,57% 91%,44% 99%,31% 90%,18% 98%,7% 90%,0 97%);display:flex;align-items:center;gap:14px;">
+            <span style="font-size:26px;">{{ ch.emoji }}</span>
+            <span style="flex:1;">
+              <span style="display:block;font-family:'Anton',sans-serif;font-size:19px;letter-spacing:1px;">{{ ch.title }}</span>
+              <span style="display:block;font-size:12.5px;opacity:.8;margin-top:2px;">{{ ch.desc }}</span>
+            </span>
+            <span style="font-size:11px;font-weight:700;letter-spacing:1px;background:rgba(32,29,26,.12);padding:4px 8px;border-radius:99px;">{{ ch.tag }}</span>
+          </button>
+        </sc-for>
+        <button onClick="{{ onSkipChallenge }}" style="border:none;cursor:pointer;background:transparent;color:#2E4A6B;font-weight:700;font-size:13px;letter-spacing:1.5px;padding:12px;text-decoration:underline;">SKIP FOR NOW</button>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ============ LAUNCH ============ -->
+  <sc-if value="{{ isLaunch }}" hint-placeholder-val="{{ false }}">
+    <div data-screen-label="Launch" style="position:absolute;inset:0;z-index:60;overflow:hidden;background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_182045_ca43f9bb-f0d2-4a06-8d08-52dc89a5d279.png');background-size:cover;background-position:center;">
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184337_7b89348a-3388-4d7c-9d76-42ed4113486c.png" alt="" style="position:absolute;top:130px;left:-20px;width:120px;animation:cpFloat 6s ease-in-out infinite;pointer-events:none;filter:drop-shadow(0 5px 7px rgba(32,29,26,.2));">
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184337_7b89348a-3388-4d7c-9d76-42ed4113486c.png" alt="" style="position:absolute;top:70px;right:-26px;width:100px;transform:scaleX(-1);animation:cpDriftSlow 8s ease-in-out infinite;pointer-events:none;opacity:.9;">
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184329_632524bf-ba57-4e16-9059-5413dd96c43a.png" alt="" style="position:absolute;bottom:-14px;left:0;width:120%;max-width:none;pointer-events:none;filter:drop-shadow(0 -4px 8px rgba(32,29,26,.18));">
+      <div style="position:absolute;left:0;right:0;top:8%;display:flex;justify-content:center;pointer-events:none;">
+        <div style="position:relative;animation:cpRocket 3s steps(30) both;">
+          <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184239_c020193e-a407-47e0-b7c5-67c5d30b0d4f.png" alt="rocket" style="width:250px;transform:rotate(7deg);filter:drop-shadow(0 14px 12px rgba(32,29,26,.4));">
+          <div style="position:absolute;left:50%;bottom:-30px;width:0;height:0;">
+            <span style="position:absolute;left:-52px;top:-6px;width:74px;height:48px;border-radius:50%;background:#FDFAF1;opacity:0;animation:cpSmokeCycle 1s steps(1) 0s infinite;filter:drop-shadow(0 3px 4px rgba(32,29,26,.2));"></span>
+            <span style="position:absolute;left:-30px;top:2px;width:60px;height:40px;border-radius:48% 52% 55% 45%;background:#F3EDE1;opacity:0;animation:cpSmokeCycle 1s steps(1) .2s infinite;"></span>
+            <span style="position:absolute;left:-64px;top:6px;width:52px;height:36px;border-radius:55% 45% 48% 52%;background:#FDFAF1;opacity:0;animation:cpSmokeCycle 1s steps(1) .4s infinite;"></span>
+            <span style="position:absolute;left:-40px;top:-14px;width:84px;height:52px;border-radius:52% 48% 45% 55%;background:#F7F1E3;opacity:0;animation:cpSmokeCycle 1s steps(1) .6s infinite;filter:drop-shadow(0 3px 4px rgba(32,29,26,.18));"></span>
+            <span style="position:absolute;left:-24px;top:10px;width:48px;height:34px;border-radius:45% 55% 52% 48%;background:#FDFAF1;opacity:0;animation:cpSmokeCycle 1s steps(1) .8s infinite;"></span>
+          </div>
+        </div>
+      </div>
+      <div style="position:absolute;left:0;right:0;top:36%;text-align:center;">
+        <div style="font-family:'Anton',sans-serif;font-size:44px;color:#FAE78C;letter-spacing:2px;animation:cpGlow 2s ease-in-out infinite;">YOU'RE ON<br>THE CALL SHEET</div>
+        <div style="font-family:'Yellowtail',cursive;font-size:24px;color:#FDF6DC;margin-top:10px;transform:rotate(-2deg);">lights, camera, accountability</div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ============ TUTORIAL ============ -->
+  <sc-if value="{{ isTour }}" hint-placeholder-val="{{ false }}">
+    <div data-screen-label="Tutorial" style="position:absolute;inset:0;z-index:60;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:0 22px 40px;background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_182045_ca43f9bb-f0d2-4a06-8d08-52dc89a5d279.png');background-size:cover;background-position:center;">
+      <div style="position:absolute;inset:0;background:rgba(30,52,80,.35);"></div>
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184337_7b89348a-3388-4d7c-9d76-42ed4113486c.png" alt="" style="position:absolute;top:80px;left:-20px;width:104px;animation:cpFloat 7s ease-in-out infinite;pointer-events:none;">
+      <div style="position:absolute;left:0;right:0;top:78px;text-align:center;">
+        <div style="font-family:'Yellowtail',cursive;font-size:24px;color:#FDF6DC;text-shadow:0 2px 6px rgba(20,30,45,.7);transform:rotate(-2deg);">welcome to the studio</div>
+        <div style="font-family:'Anton',sans-serif;font-size:34px;color:#FAE78C;letter-spacing:1.5px;filter:drop-shadow(0 3px 4px rgba(20,30,45,.6));">HOW IT WORKS</div>
+      </div>
+      <div style="position:relative;display:flex;justify-content:center;margin-bottom:16px;pointer-events:none;">{{ tourImgEl }}</div>
+      <div key="{{ tourKey }}" style="position:relative;background:#FDFAF1;padding:20px 18px 18px;box-shadow:0 7px 0 rgba(32,29,26,.22);transform:rotate(-.5deg);clip-path:polygon(1% 4%,9% 1%,22% 5%,36% 0,51% 4%,66% 1%,80% 5%,94% 1%,100% 6%,99% 95%,91% 100%,76% 95%,60% 100%,45% 95%,29% 100%,14% 96%,0 100%);animation:cpSlideUp .4s steps(5) both;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span style="font-size:26px;">{{ tourEmoji }}</span>
+          <span style="font-family:'Anton',sans-serif;font-size:19px;letter-spacing:1px;color:#201D1A;">{{ tourTitle }}</span>
+        </div>
+        
+        <div style="font-size:13.5px;line-height:1.55;color:rgba(32,29,26,.8);margin-top:9px;">{{ tourText }}</div><div style="display:flex;align-items:center;gap:6px;margin-top:16px;">
+          <sc-for list="{{ tourDots }}" as="td" hint-placeholder-count="5">
+            <span style="width:9px;height:9px;border-radius:50%;background:{{ td.bg }};transform:rotate(45deg);"></span>
+          </sc-for>
+          <button onClick="{{ tourSkip }}" style="margin-left:auto;border:none;cursor:pointer;background:transparent;color:#8A6E4B;font-weight:700;font-size:11.5px;letter-spacing:1.5px;padding:8px;text-decoration:underline;">SKIP TOUR</button>
+          <button onClick="{{ tourNext }}" style="border:none;cursor:pointer;background:#E0532F;color:#FDF6DC;font-family:'Anton',sans-serif;font-size:14px;letter-spacing:1.5px;padding:11px 18px;box-shadow:0 4px 0 rgba(32,29,26,.22);clip-path:polygon(0 16%,10% 4%,28% 13%,46% 3%,64% 12%,82% 4%,100% 10%,100% 84%,90% 96%,72% 87%,54% 97%,36% 88%,18% 97%,0 92%);">{{ tourNextLabel }}</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ============ MAIN APP ============ -->
+  <sc-if value="{{ inApp }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;background:#F3EDE1;">
+      <div style="flex:1;overflow-y:auto;overflow-x:hidden;position:relative;">
+
+        <!-- ===== TODAY TAB ===== -->
+        <sc-if value="{{ tToday }}" hint-placeholder-val="{{ true }}">
+          <div data-screen-label="Today" style="display:flex;flex-direction:column;">
+            <div style="position:relative;padding:58px 20px 30px;background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_182045_ca43f9bb-f0d2-4a06-8d08-52dc89a5d279.png');background-size:cover;background-position:center 30%;">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+                <div>
+                  <div style="font-family:'Yellowtail',cursive;font-size:22px;color:#FDF6DC;transform:rotate(-2deg);">{{ greeting }}</div>
+                  <div style="font-family:'Anton',sans-serif;font-size:34px;color:#FAE78C;letter-spacing:1px;line-height:1;filter:drop-shadow(0 3px 4px rgba(20,30,45,.55));animation:cpGlow 3.4s ease-in-out infinite;">TODAY'S TASKS</div>
+                  <div style="font-size:12px;font-weight:600;letter-spacing:1.5px;color:rgba(253,246,220,.9);margin-top:6px;">{{ todayLabel }}</div>
+                </div>
+                <div style="background:#FDFAF1;padding:10px 12px;text-align:center;transform:rotate(3deg);box-shadow:0 4px 0 rgba(32,29,26,.2);clip-path:polygon(4% 10%,20% 2%,42% 9%,64% 1%,85% 8%,100% 3%,97% 92%,78% 99%,55% 92%,32% 100%,10% 93%,0 98%);">
+                  <div style="font-family:'Anton',sans-serif;font-size:24px;color:#E0532F;">{{ streak }}</div>
+                  <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;color:#8A6E4B;">DAY STREAK 🔥</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin:-16px 18px 0;position:relative;z-index:2;">
+              <button onClick="{{ goCommunity }}" style="width:100%;border:none;cursor:pointer;text-align:left;background:#35608F;color:#F3EDE1;padding:14px 16px;transform:rotate(-.7deg);box-shadow:0 5px 0 rgba(32,29,26,.22);clip-path:polygon(0 14%,5% 3%,15% 11%,27% 2%,40% 10%,53% 2%,66% 10%,79% 2%,91% 9%,100% 4%,100% 86%,95% 97%,84% 89%,71% 98%,58% 90%,45% 98%,32% 89%,19% 97%,7% 89%,0 96%);display:flex;align-items:center;gap:12px;">
+                <span style="font-size:22px;">🏆</span>
+                <span style="flex:1;">
+                  <span style="display:block;font-family:'Anton',sans-serif;font-size:15px;letter-spacing:1px;">{{ chName }}</span>
+                  <span style="display:block;font-size:11.5px;opacity:.75;margin-top:2px;">Day {{ chDay }} of {{ chTotal }} · keep the film rolling</span>
+                </span>
+                <span style="font-family:'Anton',sans-serif;font-size:17px;color:#FAE78C;">{{ chPct }}</span>
+              </button>
+              <div style="height:9px;background:rgba(53,96,143,.18);border-radius:99px;margin:10px 4px 0;overflow:hidden;"><div style="height:100%;width:{{ chPct }};background:#E0532F;border-radius:99px;transition:width .6s steps(6);"></div></div>
+            </div>
+
+            <div style="padding:18px 18px 0;">
+              <div style="background:#FDFAF1;padding:15px 16px;transform:rotate(-.4deg);box-shadow:0 4px 0 rgba(32,29,26,.15);clip-path:polygon(0 8%,5% 1%,16% 7%,28% 0,41% 6%,54% 1%,67% 7%,80% 1%,92% 6%,100% 2%,100% 92%,95% 99%,84% 93%,71% 100%,58% 94%,45% 100%,32% 93%,19% 99%,7% 93%,0 98%);">
+                <div style="display:flex;align-items:baseline;justify-content:space-between;">
+                  <div style="font-family:'Anton',sans-serif;font-size:15px;letter-spacing:1.5px;color:#201D1A;">📊 THE SCOREBOARD</div>
+                  <div style="font-family:'Yellowtail',cursive;font-size:15px;color:#E0532F;">chasing your targets</div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:12px;margin-top:12px;">
+                  <div>
+                    <div style="display:flex;justify-content:space-between;font-size:11px;font-weight:800;letter-spacing:1px;color:#8A6E4B;"><span>👥 FOLLOWERS</span><span style="color:#201D1A;">{{ sbFollowers }} / {{ sbFollowerGoal }}</span></div>
+                    <div style="height:10px;background:rgba(53,96,143,.15);border-radius:99px;margin-top:5px;overflow:hidden;"><div style="height:100%;width:{{ sbFollowerPct }};background:#35608F;border-radius:99px;transition:width .6s steps(6);"></div></div>
+                  </div>
+                  <div>
+                    <div style="display:flex;justify-content:space-between;font-size:11px;font-weight:800;letter-spacing:1px;color:#8A6E4B;"><span>👁 IMPRESSIONS THIS MONTH</span><span style="color:#201D1A;">{{ sbImpr }} / {{ sbImprGoal }}</span></div>
+                    <div style="height:10px;background:rgba(224,83,47,.15);border-radius:99px;margin-top:5px;overflow:hidden;"><div style="height:100%;width:{{ sbImprPct }};background:#E0532F;border-radius:99px;transition:width .6s steps(6);"></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div onClick="{{ onToggleTasks }}" role="button" style="cursor:pointer;padding:20px 18px 8px;display:flex;align-items:baseline;gap:10px;" data-comment-anchor="31cf52ac39-div">
+              <div style="font-family:'Anton',sans-serif;font-size:18px;letter-spacing:1px;color:#201D1A;">DAILY TASKS</div>
+              <div style="flex:1;font-family:'Yellowtail',cursive;font-size:17px;color:#E0532F;text-align:right;">your daily call sheet</div>
+              <div style="font-family:'Anton',sans-serif;font-size:14px;color:#E0532F;">{{ tasksCaret }}</div>
+            </div>
+            <sc-if value="{{ tasksHidden }}" hint-placeholder-val="{{ false }}">
+              <div style="margin:0 18px 10px;font-size:12px;color:rgba(32,29,26,.6);background:#F3EDE1;border:2px dashed #D9CBAF;border-radius:10px;padding:10px 13px;">{{ tasksSummary }} — tap to show the call sheet.</div>
+            </sc-if>
+            <sc-if value="{{ tasksShown }}" hint-placeholder-val="{{ true }}">
+            <div style="display:flex;flex-direction:column;gap:12px;padding:4px 18px 10px;">
+              <sc-for list="{{ phases }}" as="ph" hint-placeholder-count="4">
+                <div style="background:{{ ph.bg }};transform:rotate({{ ph.tilt }});box-shadow:0 4px 0 rgba(32,29,26,.15);clip-path:polygon(0 10%,4% 2%,13% 8%,24% 1%,36% 7%,48% 1%,60% 7%,72% 1%,84% 7%,95% 2%,100% 8%,100% 90%,96% 98%,86% 92%,74% 99%,62% 93%,50% 99%,38% 93%,26% 99%,14% 93%,5% 98%,0 96%);">
+                  <div onClick="{{ ph.onOpen }}" role="button" style="width:100%;cursor:pointer;text-align:left;display:flex;align-items:center;gap:13px;padding:15px 16px;" data-comment-anchor="f8e93744a5-div">
+                    <span onClick="{{ ph.onToggle }}" role="button" style="width:30px;height:30px;flex:none;border:2.5px solid #201D1A;border-radius:8px;cursor:pointer;background:{{ ph.checkBg }};color:#FDF6DC;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;transform:rotate(-3deg);">{{ ph.check }}</span>
+                    <span style="flex:1;">
+                      <span style="display:block;font-family:'Anton',sans-serif;font-size:16px;letter-spacing:1.5px;color:#201D1A;text-decoration:{{ ph.strike }};">{{ ph.label }}</span>
+                      <span style="display:block;font-size:12px;color:rgba(32,29,26,.65);margin-top:1px;">{{ ph.sub }}</span>
+                    </span>
+                    <span style="font-size:18px;">{{ ph.emoji }}</span>
+                    <span style="font-family:'Anton',sans-serif;font-size:13px;color:#E0532F;">{{ ph.caret }}</span>
+                  </div>
+                  <sc-if value="{{ ph.open }}" hint-placeholder-val="{{ false }}">
+                    <div style="padding:0 16px 15px 59px;animation:cpSlideUp .3s steps(4) both;">
+                      <div style="font-size:12.5px;line-height:1.5;color:rgba(32,29,26,.75);">{{ ph.detail }}</div>
+                      <div style="display:flex;gap:8px;margin-top:11px;">
+                        <button onClick="{{ ph.onAction }}" style="flex:1;border:none;cursor:pointer;background:#35608F;color:#FDF6DC;font-weight:800;font-size:11.5px;letter-spacing:1px;padding:10px;border-radius:9px;box-shadow:0 3px 0 rgba(32,29,26,.18);">{{ ph.actionLabel }}</button>
+                        <button onClick="{{ ph.onToggle }}" style="flex:1;border:none;cursor:pointer;background:#E0532F;color:#FDF6DC;font-weight:800;font-size:11.5px;letter-spacing:1px;padding:10px;border-radius:9px;box-shadow:0 3px 0 rgba(32,29,26,.18);">{{ ph.toggleLabel }}</button>
+                      </div>
+                    </div>
+                  </sc-if>
+                </div>
+              </sc-for>
+            </div>
+            </sc-if>
+
+            <sc-if value="{{ hasDue }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:14px 18px 8px;">
+                <div style="background:#FAE78C;padding:14px 16px;transform:rotate(.5deg);box-shadow:0 4px 0 rgba(32,29,26,.18);clip-path:polygon(0 12%,6% 2%,17% 10%,29% 1%,42% 9%,55% 2%,68% 10%,81% 2%,93% 9%,100% 4%,100% 88%,94% 98%,83% 90%,70% 99%,57% 91%,44% 99%,31% 90%,18% 98%,7% 90%,0 97%);">
+                  <div style="display:flex;align-items:center;gap:8px;font-family:'Anton',sans-serif;font-size:14px;letter-spacing:1.5px;color:#201D1A;">📊 ANALYTICS CHECK-INS DUE</div>
+                  <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px;">
+                    <sc-for list="{{ dueList }}" as="d" hint-placeholder-count="1">
+                      <button onClick="{{ d.onOpen }}" style="border:none;cursor:pointer;text-align:left;background:#FDFAF1;border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:10px;box-shadow:0 2px 0 rgba(32,29,26,.12);">
+                        <span style="font-family:'Anton',sans-serif;font-size:13px;color:#E0532F;background:rgba(224,83,47,.12);padding:4px 8px;border-radius:8px;">{{ d.window }}</span>
+                        <span style="flex:1;font-size:13px;font-weight:600;color:#201D1A;">{{ d.title }}</span>
+                        <span style="font-size:12px;color:#8A6E4B;">log it ▸</span>
+                      </button>
+                    </sc-for>
+                  </div>
+                </div>
+              </div>
+            </sc-if>
+
+            <sc-if value="{{ hasBest }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:14px 18px 4px;display:flex;align-items:baseline;justify-content:space-between;">
+                <div style="font-family:'Anton',sans-serif;font-size:15px;letter-spacing:1.5px;color:#201D1A;">🏅 BEST PERFORMERS</div>
+                <div style="font-size:10.5px;font-weight:700;letter-spacing:1px;color:#8A6E4B;">PAST 3 MONTHS</div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:9px;padding:6px 18px 4px;" data-comment-anchor="4f73f28459-div">
+                <sc-for list="{{ bestList }}" as="bp" hint-placeholder-count="3">
+                  <div onClick="{{ bp.onOpen }}" role="button" style="cursor:pointer;display:flex;align-items:center;gap:11px;background:#FDFAF1;padding:11px 14px;border-radius:12px;box-shadow:0 3px 0 rgba(32,29,26,.12);transform:rotate({{ bp.tilt }});">
+                    <span style="font-family:'Anton',sans-serif;font-size:17px;color:#E0532F;width:24px;">{{ bp.rank }}</span>
+                    <span style="flex:1;">
+                      <span style="display:block;font-weight:700;font-size:13px;color:#201D1A;">{{ bp.title }}</span>
+                      <span style="display:block;font-size:10.5px;font-weight:700;letter-spacing:.5px;color:#8A6E4B;margin-top:1px;">{{ bp.platform }}</span>
+                    </span>
+                    <span style="text-align:right;">
+                      <span style="display:block;font-family:'Anton',sans-serif;font-size:15px;color:#201D1A;">{{ bp.views }}</span>
+                      <span style="display:block;font-size:10px;font-weight:700;color:rgba(32,29,26,.5);">VIEWS · {{ bp.likes }} ❤️</span>
+                    </span>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-if>
+
+            <div style="padding:16px 18px 26px;">
+              <div style="background:#FDFAF1;padding:15px 16px 14px;transform:rotate(.3deg);box-shadow:0 4px 0 rgba(32,29,26,.15);clip-path:polygon(0 5%,5% 1%,16% 4%,28% 0,41% 3%,54% 1%,67% 4%,80% 1%,92% 3%,100% 2%,100% 95%,95% 99%,84% 96%,71% 100%,58% 97%,45% 100%,32% 96%,19% 99%,7% 96%,0 98%);">
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <div style="font-family:'Anton',sans-serif;font-size:15px;letter-spacing:1.5px;color:#201D1A;">📈 GROWTH REEL</div>
+                  <div style="margin-left:auto;display:flex;gap:5px;">
+                    <sc-for list="{{ chartRangeOpts }}" as="cr" hint-placeholder-count="4">
+                      <button onClick="{{ cr.onPick }}" style="border:none;cursor:pointer;font-size:10.5px;font-weight:800;color:{{ cr.fg }};background:{{ cr.bg }};padding:5px 9px;border-radius:99px;box-shadow:0 2px 0 rgba(32,29,26,.12);">{{ cr.label }}</button>
+                    </sc-for>
+                  </div>
+                </div>
+                <div style="display:flex;gap:6px;margin-top:10px;">
+                  <sc-for list="{{ chartMetricOpts }}" as="cm" hint-placeholder-count="2">
+                    <button onClick="{{ cm.onPick }}" style="border:none;cursor:pointer;font-size:10.5px;font-weight:800;letter-spacing:1px;color:{{ cm.fg }};background:{{ cm.bg }};padding:6px 12px;border-radius:99px;box-shadow:0 2px 0 rgba(32,29,26,.12);">{{ cm.label }}</button>
+                  </sc-for>
+                </div>
+                <div style="display:flex;align-items:flex-end;gap:5px;margin-top:14px;height:110px;">
+                  <sc-for list="{{ chartBars }}" as="cb" hint-placeholder-count="6">
+                    <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;height:100%;">
+                      <span style="font-size:8.5px;font-weight:800;color:rgba(32,29,26,.6);">{{ cb.val }}</span>
+                      <div style="width:100%;max-width:26px;height:{{ cb.h }};background:{{ cb.color }};border-radius:5px 5px 2px 2px;box-shadow:0 2px 0 rgba(32,29,26,.15);transition:height .5s steps(6);"></div>
+                      <span style="font-size:8.5px;font-weight:800;letter-spacing:.5px;color:#8A6E4B;">{{ cb.label }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- ===== RESEARCH TAB ===== -->
+        <sc-if value="{{ tResearch }}" hint-placeholder-val="{{ false }}">
+          <div data-screen-label="Research" style="display:flex;flex-direction:column;">
+            <div style="padding:56px 20px 24px;background:#35608F;">
+              <div style="font-family:'Yellowtail',cursive;font-size:22px;color:#FAE78C;transform:rotate(-2deg);">find ideas that connect</div>
+              <div style="font-family:'Anton',sans-serif;font-size:34px;color:#F3EDE1;letter-spacing:1px;line-height:1;">RESEARCH ROOM</div>
+            </div>
+            <div style="padding:14px 18px 0;">
+              <input value="{{ researchQ }}" onChange="{{ onResearchQ }}" placeholder="🔍 Search hooks, ideas, notes…" style="width:100%;border:2px solid #D9CBAF;border-radius:99px;background:#FDFAF1;font-size:14px;padding:11px 16px;color:#201D1A;box-shadow:0 3px 0 rgba(32,29,26,.1);">
+            </div>
+            <div style="padding:14px 18px 6px;display:flex;align-items:baseline;justify-content:space-between;">
+              <div style="font-family:'Anton',sans-serif;font-size:16px;letter-spacing:1px;">VIDEO INSPO DATABASE</div>
+              <button onClick="{{ openInspoForm }}" style="border:none;cursor:pointer;background:#E0532F;color:#FDF6DC;font-weight:700;font-size:12px;letter-spacing:1px;padding:7px 12px;border-radius:99px;box-shadow:0 3px 0 rgba(32,29,26,.2);">+ CLIP</button>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px;padding:8px 18px;">
+              <sc-for list="{{ inspoList }}" as="v" hint-placeholder-count="3">
+                <div style="background:#FDFAF1;padding:14px 15px;transform:rotate({{ v.tilt }});box-shadow:0 4px 0 rgba(32,29,26,.14);clip-path:polygon(0 8%,5% 1%,16% 7%,28% 0,41% 6%,54% 1%,67% 7%,80% 1%,92% 6%,100% 2%,100% 92%,95% 99%,84% 93%,71% 100%,58% 94%,45% 100%,32% 93%,19% 99%,7% 93%,0 98%);">
+                  <div style="display:flex;align-items:center;gap:8px;">
+                    <span style="font-size:10px;font-weight:800;letter-spacing:1.5px;color:#FDF6DC;background:#35608F;padding:3px 8px;border-radius:99px;">{{ v.platform }}</span>
+                    <span style="flex:1;font-weight:700;font-size:14px;">{{ v.title }}</span>
+                  </div>
+                  <div style="display:grid;grid-template-columns:74px 1fr;gap:4px 10px;margin-top:10px;font-size:12.5px;">
+                    <span style="font-weight:800;letter-spacing:1px;color:#E0532F;font-size:10.5px;">HOOK</span><span style="color:#201D1A;">{{ v.hook }}</span>
+                    <span style="font-weight:800;letter-spacing:1px;color:#E0532F;font-size:10.5px;">ON SCREEN</span><span style="color:#201D1A;">{{ v.action }}</span>
+                    <span style="font-weight:800;letter-spacing:1px;color:#E0532F;font-size:10.5px;">QUICK IDEA</span><span style="color:#201D1A;">{{ v.idea }}</span>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+            <div style="padding:18px 18px 6px;display:flex;align-items:baseline;justify-content:space-between;">
+              <div style="font-family:'Anton',sans-serif;font-size:16px;letter-spacing:1px;">NOTES &amp; VOICE MEMOS</div>
+              <button onClick="{{ openNoteForm }}" style="border:none;cursor:pointer;background:#E0532F;color:#FDF6DC;font-weight:700;font-size:12px;letter-spacing:1px;padding:7px 12px;border-radius:99px;box-shadow:0 3px 0 rgba(32,29,26,.2);">+ NOTE</button>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px;padding:8px 18px 14px;">
+              <sc-for list="{{ notesList }}" as="n" hint-placeholder-count="2">
+                <div style="background:#FAE78C;padding:13px 15px;transform:rotate({{ n.tilt }});box-shadow:0 4px 0 rgba(32,29,26,.16);">
+                  <div style="display:flex;align-items:center;gap:8px;">
+                    <span style="font-size:15px;">{{ n.icon }}</span>
+                    <span style="flex:1;font-weight:700;font-size:13.5px;">{{ n.title }}</span>
+                    <span style="font-size:10.5px;font-weight:600;color:rgba(32,29,26,.55);">{{ n.date }}</span>
+                  </div>
+                  <div style="font-size:12.5px;color:rgba(32,29,26,.8);margin-top:6px;line-height:1.45;">{{ n.body }}</div>
+                </div>
+              </sc-for>
+            </div>
+            <div style="margin:6px 18px 26px;background:#FDFAF1;padding:14px 16px;transform:rotate(-.5deg);box-shadow:0 4px 0 rgba(32,29,26,.14);display:flex;gap:12px;align-items:center;clip-path:polygon(0 10%,6% 2%,17% 9%,29% 1%,42% 8%,55% 2%,68% 9%,81% 1%,93% 8%,100% 3%,100% 90%,94% 98%,83% 91%,70% 99%,57% 92%,44% 99%,31% 91%,18% 98%,7% 91%,0 97%);">
+              <span style="font-size:22px;">✦</span>
+              <div style="flex:1;font-size:12px;color:rgba(32,29,26,.75);line-height:1.5;"><b>Everything in this room</b> — inspo clips, notes &amp; voice-memo transcripts — feeds straight into your planning on The Slate. Manage in <a href="#" onClick="{{ goProfile }}">Profile</a>.</div>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- ===== PLAN TAB ===== -->
+        <sc-if value="{{ tPlan }}" hint-placeholder-val="{{ false }}">
+          <div data-screen-label="Plan" style="display:flex;flex-direction:column;">
+            <div style="padding:56px 20px 24px;background:linear-gradient(180deg,#8FB8E8,#A9C9EE);">
+              <div style="font-family:'Yellowtail',cursive;font-size:22px;color:#FDF6DC;transform:rotate(-2deg);">outline your content</div>
+              <div style="font-family:'Anton',sans-serif;font-size:34px;color:#FAE78C;letter-spacing:1px;line-height:1;animation:cpGlow 3.4s ease-in-out infinite;">THE SLATE</div>
+            </div>
+            <div style="padding:16px 18px 0;">
+              <div style="background:#FDFAF1;padding:14px 14px 12px;transform:rotate(-.3deg);box-shadow:0 5px 0 rgba(32,29,26,.15);clip-path:polygon(0 4%,5% .5%,16% 3%,28% 0,41% 2.5%,54% .5%,67% 3%,80% .5%,92% 2.5%,100% 1%,100% 96%,95% 99.5%,84% 97%,71% 100%,58% 97.5%,45% 100%,32% 97%,19% 99.5%,7% 97%,0 99%);">
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <button onClick="{{ calPrev }}" style="border:none;cursor:pointer;width:30px;height:30px;border-radius:9px;background:#F3EDE1;font-weight:800;color:#E0532F;box-shadow:0 2px 0 rgba(32,29,26,.12);">‹</button>
+                  <div style="flex:1;text-align:center;font-family:'Anton',sans-serif;font-size:16px;letter-spacing:2px;color:#201D1A;">{{ calTitle }}</div>
+                  <button onClick="{{ calNext }}" style="border:none;cursor:pointer;width:30px;height:30px;border-radius:9px;background:#F3EDE1;font-weight:800;color:#E0532F;box-shadow:0 2px 0 rgba(32,29,26,.12);">›</button>
+                </div>
+                <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin-top:10px;">
+                  <sc-for list="{{ calDow }}" as="dw" hint-placeholder-count="7">
+                    <div style="text-align:center;font-size:9.5px;font-weight:800;letter-spacing:1px;color:#8A6E4B;padding:2px 0;">{{ dw }}</div>
+                  </sc-for>
+                  <sc-for list="{{ calCells }}" as="c" hint-placeholder-count="35">
+                    <button onClick="{{ c.onTap }}" style="border:{{ c.border }};cursor:pointer;background:{{ c.bg }};color:{{ c.fg }};border-radius:9px;padding:4px 0 3px;display:flex;flex-direction:column;align-items:center;gap:1px;min-height:37px;">
+                      <span style="font-size:12.5px;font-weight:700;">{{ c.day }}</span>
+                      <span style="font-size:7.5px;line-height:1;">{{ c.dots }}</span>
+                    </button>
+                  </sc-for>
+                </div>
+                <div style="display:flex;gap:12px;margin-top:9px;font-size:10px;font-weight:700;color:rgba(32,29,26,.6);"><span>🎬 filming</span><span>🚀 posting</span><span style="margin-left:auto;color:#E0532F;">⬤ today</span></div>
+              </div>
+            </div>
+
+            <div style="padding:12px 18px 0;">
+              <div style="background:#F3EDE1;border:2px dashed #D9CBAF;border-radius:12px;padding:12px 14px;">
+                <div style="font-size:10.5px;font-weight:800;letter-spacing:2px;color:#8A6E4B;">ON THE SLATE · {{ selLabel }}</div>
+                <sc-if value="{{ selHasItems }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px;">
+                    <sc-for list="{{ selItems }}" as="si" hint-placeholder-count="2">
+                      <div onClick="{{ si.onOpen }}" role="button" style="cursor:pointer;display:flex;align-items:center;gap:9px;background:#FDFAF1;border-radius:9px;padding:8px 11px;box-shadow:0 2px 0 rgba(32,29,26,.1);" data-comment-anchor="1ad700f402-div">
+                        <span style="font-size:14px;">{{ si.emoji }}</span>
+                        <span style="flex:1;">
+                          <span style="display:block;font-size:12.5px;font-weight:700;color:#201D1A;">{{ si.title }}</span>
+                          <span style="display:block;font-size:10px;font-weight:800;letter-spacing:1px;color:#8A6E4B;margin-top:1px;">{{ si.kind }} · {{ si.platform }}</span>
+                        </span>
+                        <span style="font-size:10px;font-weight:800;letter-spacing:1px;color:{{ si.statusColor }};">{{ si.status }}</span>
+                      </div>
+                    </sc-for>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ selEmpty }}" hint-placeholder-val="{{ false }}">
+                  <div style="font-size:12px;color:rgba(32,29,26,.55);margin-top:7px;">Nothing slated — a quiet day on the lot. <b>Tap + Plan a Post</b> to fill it.</div>
+                </sc-if>
+              </div>
+              <button onClick="{{ openPlanForm }}" style="width:100%;margin-top:10px;border:none;cursor:pointer;background:#201D1A;color:#FAE78C;font-family:'Anton',sans-serif;font-size:13px;letter-spacing:1.5px;padding:12px;box-shadow:0 4px 0 rgba(32,29,26,.3);clip-path:polygon(0 16%,10% 4%,28% 13%,46% 3%,64% 12%,82% 4%,100% 10%,100% 84%,90% 96%,72% 87%,54% 97%,36% 88%,18% 97%,0 92%);">PLAN A POST NOW ▸</button>
+            </div>
+
+            <div style="padding:14px 18px 0;">
+              <div style="background:{{ riskBg }};padding:15px 16px;transform:rotate(.4deg);box-shadow:0 5px 0 rgba(32,29,26,.18);clip-path:polygon(0 8%,5% 1%,16% 7%,28% 0,41% 6%,54% 1%,67% 7%,80% 1%,92% 6%,100% 2%,100% 92%,95% 99%,84% 93%,71% 100%,58% 94%,45% 100%,32% 93%,19% 99%,7% 93%,0 98%);">
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <span style="font-size:18px;">{{ riskEmoji }}</span>
+                  <span style="font-family:'Anton',sans-serif;font-size:15px;letter-spacing:1.5px;color:#201D1A;">RISK RADAR</span>
+                  <span style="margin-left:auto;font-family:'Yellowtail',cursive;font-size:15px;color:rgba(32,29,26,.65);">{{ riskVerdict }}</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:9px;margin-top:11px;font-size:12.5px;font-weight:700;color:#201D1A;">
+                  <span>In the next</span>
+                  <button onClick="{{ onRiskMinus }}" style="border:none;cursor:pointer;width:26px;height:26px;border-radius:8px;background:rgba(253,250,241,.85);font-weight:800;color:#E0532F;box-shadow:0 2px 0 rgba(32,29,26,.15);">−</button>
+                  <span style="font-family:'Anton',sans-serif;font-size:19px;">{{ riskWin }}</span>
+                  <button onClick="{{ onRiskPlus }}" style="border:none;cursor:pointer;width:26px;height:26px;border-radius:8px;background:rgba(253,250,241,.85);font-weight:800;color:#E0532F;box-shadow:0 2px 0 rgba(32,29,26,.15);">+</button>
+                  <span>days, you have</span>
+                </div>
+                <div style="margin-top:9px;font-family:'Anton',sans-serif;font-size:24px;letter-spacing:1px;color:#201D1A;">{{ riskPlanned }} OF {{ riskNeeded }} <span style="font-size:13px;letter-spacing:1.5px;">PLANNED POSTS</span></div>
+                <div style="height:10px;background:rgba(32,29,26,.14);border-radius:99px;margin-top:8px;overflow:hidden;"><div style="height:100%;width:{{ riskPct }};background:{{ riskBarColor }};border-radius:99px;transition:width .5s steps(5);"></div></div>
+                <sc-if value="{{ hasRiskFlags }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:flex;flex-direction:column;gap:7px;margin-top:11px;">
+                    <sc-for list="{{ riskFlags }}" as="rf" hint-placeholder-count="2">
+                      <div style="display:flex;align-items:flex-start;gap:8px;background:rgba(253,250,241,.8);border-radius:9px;padding:9px 11px;font-size:12px;line-height:1.45;color:#201D1A;">
+                        <span style="font-size:13px;">{{ rf.icon }}</span>
+                        <span style="flex:1;">{{ rf.text }}</span>
+                      </div>
+                    </sc-for>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ riskAllClear }}" hint-placeholder-val="{{ false }}">
+                  <div style="margin-top:10px;font-size:12px;color:rgba(32,29,26,.7);">All clear — your slate covers the goal. Keep the film rolling. 🎬</div>
+                </sc-if>
+              </div>
+            </div>
+
+            <div style="padding:18px 18px 6px;display:flex;align-items:baseline;justify-content:space-between;">
+              <div style="font-family:'Anton',sans-serif;font-size:16px;letter-spacing:1px;">PRODUCTION SCHEDULE</div>
+              <button onClick="{{ openPlanForm }}" style="border:none;cursor:pointer;background:#E0532F;color:#FDF6DC;font-weight:700;font-size:12px;letter-spacing:1px;padding:7px 12px;border-radius:99px;box-shadow:0 3px 0 rgba(32,29,26,.2);">+ PLAN A POST</button>
+            </div>
+            <div style="padding:0 18px 2px;display:flex;align-items:center;gap:8px;">
+              <div style="font-size:10.5px;font-weight:700;color:rgba(32,29,26,.55);">sorted by what needs attention first</div>
+              <button onClick="{{ onHidePosted }}" style="margin-left:auto;border:none;cursor:pointer;font-size:10.5px;font-weight:800;letter-spacing:1px;color:{{ hpFg }};background:{{ hpBg }};padding:6px 11px;border-radius:99px;box-shadow:0 2px 0 rgba(32,29,26,.13);">{{ hpLabel }}</button>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px;padding:8px 18px 26px;">
+              <sc-for list="{{ planList }}" as="p" hint-placeholder-count="3">
+                <div onClick="{{ p.onOpen }}" role="button" style="cursor:pointer;background:{{ p.bg }};padding:15px 16px;transform:rotate({{ p.tilt }});box-shadow:0 4px 0 rgba(32,29,26,.15);clip-path:polygon(0 8%,5% 1%,16% 7%,28% 0,41% 6%,54% 1%,67% 7%,80% 1%,92% 6%,100% 2%,100% 92%,95% 99%,84% 93%,71% 100%,58% 94%,45% 100%,32% 93%,19% 99%,7% 93%,0 98%);">
+                  <div style="display:flex;align-items:center;gap:9px;">
+                    <span style="font-size:10px;font-weight:800;letter-spacing:1.5px;color:#FDF6DC;background:#35608F;padding:3px 8px;border-radius:99px;">{{ p.platform }}</span>
+                    <span style="flex:1;font-weight:700;font-size:14.5px;color:#201D1A;">{{ p.title }}</span>
+                    <span style="font-size:10.5px;font-weight:800;letter-spacing:1px;color:{{ p.statusColor }};">{{ p.status }}</span>
+                  </div>
+                  <div style="display:flex;gap:14px;margin-top:10px;font-size:12px;color:rgba(32,29,26,.75);">
+                    <span>🎬 Film <b>{{ p.filmDate }}</b></span>
+                    <span>🚀 Post <b>{{ p.postDate }}</b></span>
+                  </div>
+                  <div style="margin-top:8px;font-size:12.5px;line-height:1.5;color:rgba(32,29,26,.85);background:rgba(253,250,241,.6);border-radius:8px;padding:8px 10px;"><b style="font-size:10px;letter-spacing:1px;color:#E0532F;">SCRIPT · </b>{{ p.script }}</div>
+                  <div style="margin-top:7px;font-size:11.5px;color:#35608F;">🎞 Inspo: {{ p.inspo }}</div>
+                  <sc-if value="{{ p.hasNote }}" hint-placeholder-val="{{ false }}">
+                    <div style="margin-top:5px;font-size:11.5px;color:#8A6E4B;">📝 Research: {{ p.noteRef }}</div>
+                  </sc-if>
+                  <sc-if value="{{ p.flagged }}" hint-placeholder-val="{{ false }}">
+                    <div style="margin-top:8px;font-size:11px;font-weight:800;letter-spacing:.5px;color:#B3402A;background:rgba(224,83,47,.12);border-radius:8px;padding:6px 10px;">🚨 {{ p.flagText }}</div>
+                  </sc-if>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- ===== COMMUNITY TAB ===== -->
+        <sc-if value="{{ tCommunity }}" hint-placeholder-val="{{ false }}">
+          <div data-screen-label="Community" style="display:flex;flex-direction:column;">
+            <div style="position:relative;padding:56px 20px 26px;overflow:hidden;background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_182107_90d96355-bc4a-4d45-97de-fa5bc19c5c7d.png');background-size:cover;background-position:center 60%;">
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(53,96,143,.5),rgba(53,96,143,.15));"></div>
+              <div style="position:relative;">
+                <div style="font-family:'Yellowtail',cursive;font-size:22px;color:#FAE78C;transform:rotate(-2deg);">better together</div>
+                <div style="font-family:'Anton',sans-serif;font-size:34px;color:#F3EDE1;letter-spacing:1px;line-height:1;">THE LOT</div>
+              </div>
+            </div>
+
+            <div style="padding:16px 18px 4px;font-family:'Anton',sans-serif;font-size:16px;letter-spacing:1px;">CHALLENGES 🏆</div>
+            <div style="display:flex;gap:11px;overflow-x:auto;padding:10px 18px 6px;">
+              <sc-for list="{{ commChallenges }}" as="c" hint-placeholder-count="3">
+                <button onClick="{{ c.onJoin }}" style="border:none;cursor:pointer;flex:none;width:170px;text-align:left;background:{{ c.bg }};color:{{ c.fg }};padding:14px;transform:rotate({{ c.tilt }});box-shadow:0 4px 0 rgba(32,29,26,.18);clip-path:polygon(0 10%,7% 2%,19% 8%,32% 1%,45% 7%,58% 1%,71% 8%,84% 2%,94% 8%,100% 4%,100% 90%,93% 98%,81% 92%,68% 99%,55% 93%,42% 99%,29% 92%,16% 98%,6% 92%,0 97%);">
+                  <span style="display:block;font-size:20px;">{{ c.emoji }}</span>
+                  <span style="display:block;font-family:'Anton',sans-serif;font-size:15px;letter-spacing:.5px;margin-top:6px;">{{ c.title }}</span>
+                  <span style="display:block;font-size:11px;opacity:.8;margin-top:3px;">{{ c.desc }}</span>
+                  <span style="display:inline-block;margin-top:9px;font-size:10px;font-weight:800;letter-spacing:1px;background:rgba(32,29,26,.14);padding:4px 8px;border-radius:99px;">{{ c.cta }}</span>
+                </button>
+              </sc-for>
+            </div>
+
+            <div style="padding:18px 18px 4px;font-family:'Anton',sans-serif;font-size:16px;letter-spacing:1px;">CLEAR SKY BULLETIN 📌</div>
+            <div style="display:flex;flex-direction:column;gap:10px;padding:10px 18px;">
+              <sc-for list="{{ bulletins }}" as="b" hint-placeholder-count="2">
+                <div style="background:#FDFAF1;padding:13px 15px;transform:rotate({{ b.tilt }});box-shadow:0 4px 0 rgba(32,29,26,.13);border-left:5px solid #E0532F;">
+                  <div style="display:flex;align-items:baseline;gap:8px;"><span style="font-weight:800;font-size:13.5px;">{{ b.title }}</span><span style="margin-left:auto;font-size:10.5px;color:rgba(32,29,26,.5);font-weight:600;">{{ b.date }}</span></div>
+                  <div style="font-size:12.5px;color:rgba(32,29,26,.78);margin-top:5px;line-height:1.45;">{{ b.body }}</div>
+                </div>
+              </sc-for>
+            </div>
+
+            <div style="padding:16px 18px 4px;display:flex;align-items:baseline;justify-content:space-between;">
+              <div style="font-family:'Anton',sans-serif;font-size:16px;letter-spacing:1px;">LEADERBOARD</div>
+              <button onClick="{{ onInvite }}" style="border:none;cursor:pointer;background:#35608F;color:#FDF6DC;font-weight:700;font-size:12px;letter-spacing:1px;padding:7px 12px;border-radius:99px;box-shadow:0 3px 0 rgba(32,29,26,.2);">+ INVITE A FRIEND</button>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px;padding:10px 18px 26px;">
+              <sc-for list="{{ leaders }}" as="l" hint-placeholder-count="4">
+                <div style="display:flex;align-items:center;gap:11px;background:{{ l.bg }};padding:11px 14px;border-radius:12px;box-shadow:0 3px 0 rgba(32,29,26,.12);transform:rotate({{ l.tilt }});">
+                  <span style="font-family:'Anton',sans-serif;font-size:16px;width:24px;color:#E0532F;">{{ l.rank }}</span>
+                  <span style="width:34px;height:34px;border-radius:50%;background:#35608F;color:#FAE78C;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;transform:rotate(-4deg);">{{ l.initials }}</span>
+                  <span style="flex:1;">
+                    <span style="display:block;font-weight:700;font-size:13.5px;">{{ l.name }}</span>
+                    <span style="display:block;font-size:11px;color:rgba(32,29,26,.6);">{{ l.detail }}</span>
+                  </span>
+                  <span style="font-family:'Anton',sans-serif;font-size:15px;">{{ l.score }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- ===== PROFILE TAB ===== -->
+        <sc-if value="{{ tProfile }}" hint-placeholder-val="{{ false }}">
+          <div data-screen-label="Profile" style="display:flex;flex-direction:column;">
+            <div style="padding:56px 20px 26px;background:#35608F;display:flex;align-items:center;gap:14px;">
+              <div style="width:62px;height:62px;flex:none;border-radius:50%;overflow:hidden;background:#FAE78C;transform:rotate(-4deg);box-shadow:0 4px 0 rgba(32,29,26,.25);">
+                <sc-if value="{{ hasAvatarImg }}" hint-placeholder-val="{{ false }}"><div style="width:100%;height:100%;background-size:cover;background-position:center;background-image:{{ avatarBg }};"></div></sc-if>
+                <sc-if value="{{ hasAvatarSprite }}" hint-placeholder-val="{{ false }}"><div style="width:100%;height:100%;background-image:url('assets/avatars-sprite.png');background-size:400% 500%;background-position:{{ avPos }};"></div></sc-if>
+                <sc-if value="{{ noAvatar }}" hint-placeholder-val="{{ true }}"><div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#35608F;font-family:'Anton',sans-serif;font-size:24px;">{{ profInitials }}</div></sc-if>
+              </div>
+              <div>
+                <div style="font-family:'Anton',sans-serif;font-size:24px;color:#F3EDE1;letter-spacing:1px;">{{ profName }}</div>
+                <div style="font-family:'Yellowtail',cursive;font-size:17px;color:#FAE78C;">{{ profGoal }}</div>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:11px;padding:16px 18px 26px;">
+
+              <!-- PERSONAL -->
+              <div style="background:#FDFAF1;transform:rotate(-.4deg);box-shadow:0 4px 0 rgba(32,29,26,.13);clip-path:polygon(0 2%,10% 0,25% 2%,40% 0,55% 2%,70% 0,85% 2%,100% 0,100% 98%,90% 100%,75% 98%,60% 100%,45% 98%,30% 100%,15% 98%,0 100%);">
+                <button onClick="{{ sec.personal.onTap }}" style="width:100%;border:none;cursor:pointer;background:transparent;display:flex;align-items:center;gap:11px;padding:18px 16px 14px;text-align:left;">
+                  <span style="font-size:18px;">👤</span>
+                  <span style="flex:1;font-family:'Anton',sans-serif;font-size:14px;letter-spacing:1.5px;color:#201D1A;">PERSONAL</span>
+                  <span style="font-family:'Anton',sans-serif;font-size:13px;color:#E0532F;">{{ sec.personal.caret }}</span>
+                </button>
+                <sc-if value="{{ sec.personal.open }}" hint-placeholder-val="{{ false }}">
+                  <div style="padding:0 16px 22px;display:flex;flex-direction:column;gap:12px;animation:cpSlideUp .3s steps(4) both;">
+                    <div>
+                      <div style="display:flex;align-items:center;gap:12px;">
+                        <div style="font-size:10.5px;font-weight:800;letter-spacing:2px;color:#8A6E4B;">HEADSHOT</div>
+                        <div style="margin-left:auto;display:flex;gap:7px;">
+                          <label style="cursor:pointer;font-size:11px;font-weight:800;letter-spacing:.5px;color:#FDF6DC;background:#35608F;padding:7px 11px;border-radius:99px;box-shadow:0 2px 0 rgba(32,29,26,.15);">
+                            📷 TAKE PHOTO
+                            <input type="file" accept="image/*" capture="user" onChange="{{ onAvatarUpload }}" style="display:none;">
+                          </label>
+                          <label style="cursor:pointer;font-size:11px;font-weight:800;letter-spacing:.5px;color:#35608F;background:#F3EDE1;padding:7px 11px;border-radius:99px;box-shadow:0 2px 0 rgba(32,29,26,.15);">
+                            🖼 UPLOAD
+                            <input type="file" accept="image/*" onChange="{{ onAvatarUpload }}" style="display:none;">
+                          </label>
+                        </div>
+                      </div>
+                      <div style="font-size:11px;color:rgba(32,29,26,.55);margin-top:6px;">…or pick from the casting book:</div>
+                      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-top:8px;">
+                        <sc-for list="{{ avatarOpts }}" as="av" hint-placeholder-count="20">
+                          <button onClick="{{ av.onPick }}" style="border:{{ av.border }};cursor:pointer;padding:0;width:100%;aspect-ratio:1;border-radius:50%;overflow:hidden;background-image:url('assets/avatars-sprite.png');background-size:400% 500%;background-position:{{ av.pos }};box-shadow:0 2px 0 rgba(32,29,26,.15);"></button>
+                        </sc-for>
+                      </div>
+                    </div>
+                    <div style="display:flex;flex-direction:column;gap:5px;">
+                      <label style="font-size:10.5px;font-weight:800;letter-spacing:2px;color:#8A6E4B;">STAGE NAME</label>
+                      <input value="{{ authName }}" onChange="{{ onEditName }}" style="border:none;border-bottom:2px solid #D9CBAF;background:transparent;font-size:15px;padding:6px 2px;color:#201D1A;">
+                    </div>
+                    <div style="display:flex;flex-direction:column;gap:5px;">
+                      <label style="font-size:10.5px;font-weight:800;letter-spacing:2px;color:#8A6E4B;">EMAIL</label>
+                      <input value="{{ authEmail }}" onChange="{{ onEditEmail }}" style="border:none;border-bottom:2px solid #D9CBAF;background:transparent;font-size:15px;padding:6px 2px;color:#201D1A;">
+                    </div>
+                    <div style="display:flex;flex-direction:column;gap:5px;">
+                      <label style="font-size:10.5px;font-weight:800;letter-spacing:2px;color:#8A6E4B;">BRAND</label>
+                      <input value="{{ profBrand }}" onChange="{{ onEditBrand }}" style="border:none;border-bottom:2px solid #D9CBAF;background:transparent;font-size:15px;padding:6px 2px;color:#201D1A;">
+                    </div>
+                    <div>
+                      <div style="font-size:10.5px;font-weight:800;letter-spacing:2px;color:#8A6E4B;">MY PLATFORMS · TAP TO TOGGLE</div>
+                      <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:8px;">
+                        <sc-for list="{{ profPlatformOpts }}" as="pl" hint-placeholder-count="6">
+                          <button onClick="{{ pl.onPick }}" style="border:none;cursor:pointer;font-size:12px;font-weight:700;background:{{ pl.bg }};color:{{ pl.fg }};padding:6px 11px;border-radius:99px;box-shadow:0 2px 0 rgba(32,29,26,.14);">{{ pl.label }}</button>
+                        </sc-for>
+                      </div>
+                    </div>
+                    <div>
+                      <div style="font-size:10.5px;font-weight:800;letter-spacing:2px;color:#8A6E4B;">POSTING CADENCE</div>
+                      <div style="display:flex;align-items:center;gap:10px;margin-top:8px;font-size:12.5px;color:rgba(32,29,26,.75);">
+                        <button onClick="{{ onCadDaysMinus }}" style="border:none;cursor:pointer;width:28px;height:28px;border-radius:8px;background:#F3EDE1;font-weight:800;color:#E0532F;box-shadow:0 2px 0 rgba(32,29,26,.12);">−</button>
+                        <span style="font-family:'Anton',sans-serif;font-size:17px;">{{ cadDays }}</span>
+                        <button onClick="{{ onCadDaysPlus }}" style="border:none;cursor:pointer;width:28px;height:28px;border-radius:8px;background:#F3EDE1;font-weight:800;color:#E0532F;box-shadow:0 2px 0 rgba(32,29,26,.12);">+</button>
+                        <span>days/wk ·</span>
+                        <button onClick="{{ onCadPostsMinus }}" style="border:none;cursor:pointer;width:28px;height:28px;border-radius:8px;background:#F3EDE1;font-weight:800;color:#E0532F;box-shadow:0 2px 0 rgba(32,29,26,.12);">−</button>
+                        <span style="font-family:'Anton',sans-serif;font-size:17px;">{{ cadPosts }}</span>
+                        <button onClick="{{ onCadPostsPlus }}" style="border:none;cursor:pointer;width:28px;height:28px;border-radius:8px;background:#F3EDE1;font-weight:800;color:#E0532F;box-shadow:0 2px 0 rgba(32,29,26,.12);">+</button>
+                        <span>posts/day</span>
+                      </div>
+                    </div>
+                    <div style="font-size:11px;color:rgba(32,29,26,.5);">Changes save automatically ✓</div>
+                  </div>
+                </sc-if>
+              </div>
+
+              <!-- METRICS -->
+              <div style="background:#FDFAF1;transform:rotate(.4deg);box-shadow:0 4px 0 rgba(32,29,26,.13);clip-path:polygon(0 2%,10% 0,25% 2%,40% 0,55% 2%,70% 0,85% 2%,100% 0,100% 98%,90% 100%,75% 98%,60% 100%,45% 98%,30% 100%,15% 98%,0 100%);">
+                <button onClick="{{ sec.metrics.onTap }}" style="width:100%;border:none;cursor:pointer;background:transparent;display:flex;align-items:center;gap:11px;padding:18px 16px 14px;text-align:left;">
+                  <span style="font-size:18px;">📊</span>
+                  <span style="flex:1;font-family:'Anton',sans-serif;font-size:14px;letter-spacing:1.5px;color:#201D1A;">METRICS</span>
+                  <span style="font-family:'Anton',sans-serif;font-size:13px;color:#E0532F;">{{ sec.metrics.caret }}</span>
+                </button>
+                <sc-if value="{{ sec.metrics.open }}" hint-placeholder-val="{{ false }}">
+                  <div style="padding:0 16px 22px;display:flex;flex-direction:column;gap:12px;animation:cpSlideUp .3s steps(4) both;">
+                    <div style="display:flex;flex-direction:column;gap:5px;">
+                      <label style="font-size:10.5px;font-weight:800;letter-spacing:2px;color:#8A6E4B;">👥 CURRENT FOLLOWERS</label>
+                      <input value="{{ mFollowersNow }}" onChange="{{ onMFollowersNow }}" inputMode="numeric" style="border:2px solid #D9CBAF;border-radius:9px;background:#F3EDE1;font-family:'Anton',sans-serif;font-size:17px;padding:8px 10px;color:#201D1A;">
+                      <div style="font-size:11px;color:rgba(32,29,26,.55);">Update this monthly — we&rsquo;ll remind you on Today.</div>
+                    </div>
+                    <div style="display:flex;flex-direction:column;gap:5px;">
+                      <label style="font-size:10.5px;font-weight:800;letter-spacing:2px;color:#8A6E4B;">👥 FOLLOWER GOAL</label>
+                      <input value="{{ tFollowers }}" onChange="{{ onTFollowers }}" inputMode="numeric" style="border:2px solid #D9CBAF;border-radius:9px;background:#F3EDE1;font-family:'Anton',sans-serif;font-size:17px;padding:8px 10px;color:#201D1A;">
+                      <div style="font-size:11px;color:rgba(32,29,26,.55);">Currently at {{ sbFollowers }} · {{ sbFollowerPct }} of the way</div>
+                    </div>
+                    <div style="display:flex;flex-direction:column;gap:5px;">
+                      <label style="font-size:10.5px;font-weight:800;letter-spacing:2px;color:#8A6E4B;">👁 MONTHLY IMPRESSIONS GOAL</label>
+                      <input value="{{ tImpressions }}" onChange="{{ onTImpressions }}" inputMode="numeric" style="border:2px solid #D9CBAF;border-radius:9px;background:#F3EDE1;font-family:'Anton',sans-serif;font-size:17px;padding:8px 10px;color:#201D1A;">
+                      <div style="font-size:11px;color:rgba(32,29,26,.55);">This month: {{ sbImpr }} · {{ sbImprPct }} of the way</div>
+                    </div>
+                    <div style="font-size:11px;color:rgba(32,29,26,.5);">The Scoreboard on Today tracks these goals.</div>
+                  </div>
+                </sc-if>
+              </div>
+
+              <!-- CELEBRATIONS -->
+              <div style="background:#FDFAF1;transform:rotate(-.3deg);box-shadow:0 4px 0 rgba(32,29,26,.13);clip-path:polygon(0 2%,10% 0,25% 2%,40% 0,55% 2%,70% 0,85% 2%,100% 0,100% 98%,90% 100%,75% 98%,60% 100%,45% 98%,30% 100%,15% 98%,0 100%);">
+                <button onClick="{{ sec.celebrations.onTap }}" style="width:100%;border:none;cursor:pointer;background:transparent;display:flex;align-items:center;gap:11px;padding:18px 16px 14px;text-align:left;">
+                  <span style="font-size:18px;">🎉</span>
+                  <span style="flex:1;font-family:'Anton',sans-serif;font-size:14px;letter-spacing:1.5px;color:#201D1A;">CELEBRATIONS</span>
+                  <span style="font-family:'Anton',sans-serif;font-size:13px;color:#E0532F;">{{ sec.celebrations.caret }}</span>
+                </button>
+                <sc-if value="{{ sec.celebrations.open }}" hint-placeholder-val="{{ false }}">
+                  <div style="padding:0 16px 22px;animation:cpSlideUp .3s steps(4) both;">
+                    <div style="font-size:11.5px;color:rgba(32,29,26,.6);">Who takes the stage when you complete a task?</div>
+                    <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:10px;">
+                      <sc-for list="{{ celebCast }}" as="cc" hint-placeholder-count="5">
+                        <button onClick="{{ cc.onPick }}" style="border:none;cursor:pointer;font-size:12px;font-weight:700;background:{{ cc.bg }};color:#201D1A;padding:7px 12px;border-radius:99px;box-shadow:0 2px 0 rgba(32,29,26,.15);transform:rotate({{ cc.tilt }});">{{ cc.emoji }} {{ cc.label }}</button>
+                      </sc-for>
+                    </div>
+                  </div>
+                </sc-if>
+              </div>
+
+              <!-- CURRENT CHALLENGES -->
+              <div style="background:#FDFAF1;transform:rotate(.3deg);box-shadow:0 4px 0 rgba(32,29,26,.13);clip-path:polygon(0 2%,10% 0,25% 2%,40% 0,55% 2%,70% 0,85% 2%,100% 0,100% 98%,90% 100%,75% 98%,60% 100%,45% 98%,30% 100%,15% 98%,0 100%);">
+                <button onClick="{{ sec.challenges.onTap }}" style="width:100%;border:none;cursor:pointer;background:transparent;display:flex;align-items:center;gap:11px;padding:18px 16px 14px;text-align:left;">
+                  <span style="font-size:18px;">🏆</span>
+                  <span style="flex:1;font-family:'Anton',sans-serif;font-size:14px;letter-spacing:1.5px;color:#201D1A;">CURRENT CHALLENGES</span>
+                  <span style="font-family:'Anton',sans-serif;font-size:13px;color:#E0532F;">{{ sec.challenges.caret }}</span>
+                </button>
+                <sc-if value="{{ sec.challenges.open }}" hint-placeholder-val="{{ false }}">
+                  <div style="padding:0 16px 22px;display:flex;flex-direction:column;gap:9px;animation:cpSlideUp .3s steps(4) both;">
+                    <div style="background:#35608F;color:#F3EDE1;padding:12px 14px;border-radius:11px;">
+                      <div style="font-family:'Anton',sans-serif;font-size:14px;letter-spacing:1px;">{{ chName }}</div>
+                      <div style="font-size:11.5px;opacity:.75;margin-top:2px;">Day {{ chDay }} of {{ chTotal }} · {{ chPct }} complete</div>
+                    </div>
+                    <div style="font-size:10.5px;font-weight:800;letter-spacing:2px;color:#8A6E4B;margin-top:2px;">SWITCH TO</div>
+                    <sc-for list="{{ profChallengeOpts }}" as="pc" hint-placeholder-count="3">
+                      <button onClick="{{ pc.onPick }}" style="border:none;cursor:pointer;text-align:left;background:#F3EDE1;padding:10px 13px;border-radius:10px;display:flex;align-items:center;gap:9px;box-shadow:0 2px 0 rgba(32,29,26,.12);">
+                        <span style="font-size:16px;">{{ pc.emoji }}</span>
+                        <span style="flex:1;font-size:12.5px;font-weight:700;color:#201D1A;">{{ pc.title }}</span>
+                        <span style="font-size:11px;color:#8A6E4B;">join ▸</span>
+                      </button>
+                    </sc-for>
+                  </div>
+                </sc-if>
+              </div>
+
+              <!-- HELP -->
+              <div style="background:#FDFAF1;transform:rotate(-.3deg);box-shadow:0 4px 0 rgba(32,29,26,.13);clip-path:polygon(0 2%,10% 0,25% 2%,40% 0,55% 2%,70% 0,85% 2%,100% 0,100% 98%,90% 100%,75% 98%,60% 100%,45% 98%,30% 100%,15% 98%,0 100%);">
+                <button onClick="{{ sec.help.onTap }}" style="width:100%;border:none;cursor:pointer;background:transparent;display:flex;align-items:center;gap:11px;padding:18px 16px 14px;text-align:left;">
+                  <span style="font-size:18px;">🛟</span>
+                  <span style="flex:1;font-family:'Anton',sans-serif;font-size:14px;letter-spacing:1.5px;color:#201D1A;">HELP</span>
+                  <span style="font-family:'Anton',sans-serif;font-size:13px;color:#E0532F;">{{ sec.help.caret }}</span>
+                </button>
+                <sc-if value="{{ sec.help.open }}" hint-placeholder-val="{{ false }}">
+                  <div style="padding:0 16px 22px;display:flex;flex-direction:column;gap:10px;animation:cpSlideUp .3s steps(4) both;">
+                    <div style="font-size:12.5px;line-height:1.55;color:rgba(32,29,26,.75);"><b>How do check-ins work?</b> After you post, we ping you at 3, 7 and 30 days to log analytics.</div>
+                    <div style="font-size:12.5px;line-height:1.55;color:rgba(32,29,26,.75);"><b>What breaks a streak?</b> Missing a scheduled posting day. Rest days don&rsquo;t count against you.</div>
+                    <div style="font-size:12.5px;line-height:1.55;color:rgba(32,29,26,.75);"><b>Replay the tour?</b> Watch the &ldquo;How It Works&rdquo; walkthrough again anytime.</div>
+                    <div style="display:flex;gap:8px;">
+                      <button onClick="{{ onReplayTour }}" style="flex:1;border:none;cursor:pointer;background:#35608F;color:#FDF6DC;font-weight:800;font-size:11.5px;letter-spacing:1px;padding:10px;border-radius:9px;box-shadow:0 3px 0 rgba(32,29,26,.18);">REPLAY TOUR ▸</button>
+                      <button onClick="{{ onHelpContact }}" style="flex:1;border:none;cursor:pointer;background:#E0532F;color:#FDF6DC;font-weight:800;font-size:11.5px;letter-spacing:1px;padding:10px;border-radius:9px;box-shadow:0 3px 0 rgba(32,29,26,.18);">CONTACT SUPPORT</button>
+                    </div>
+                  </div>
+                </sc-if>
+              </div>
+
+              <!-- DOWNLOAD DATA -->
+              <div style="background:#FDFAF1;transform:rotate(.3deg);box-shadow:0 4px 0 rgba(32,29,26,.13);clip-path:polygon(0 2%,10% 0,25% 2%,40% 0,55% 2%,70% 0,85% 2%,100% 0,100% 98%,90% 100%,75% 98%,60% 100%,45% 98%,30% 100%,15% 98%,0 100%);">
+                <button onClick="{{ sec.download.onTap }}" style="width:100%;border:none;cursor:pointer;background:transparent;display:flex;align-items:center;gap:11px;padding:18px 16px 14px;text-align:left;">
+                  <span style="font-size:18px;">📥</span>
+                  <span style="flex:1;font-family:'Anton',sans-serif;font-size:14px;letter-spacing:1.5px;color:#201D1A;">DOWNLOAD DATA</span>
+                  <span style="font-family:'Anton',sans-serif;font-size:13px;color:#E0532F;">{{ sec.download.caret }}</span>
+                </button>
+                <sc-if value="{{ sec.download.open }}" hint-placeholder-val="{{ false }}">
+                  <div style="padding:0 16px 22px;animation:cpSlideUp .3s steps(4) both;">
+                    <div style="font-size:12.5px;line-height:1.55;color:rgba(32,29,26,.75);">Export everything you&rsquo;ve logged — every post, its status, dates, script, links and 3/7/30-day analytics — as a CSV you can open in Sheets or Excel.</div>
+                    <button onClick="{{ onDownloadData }}" style="width:100%;margin-top:11px;border:none;cursor:pointer;background:#35608F;color:#FDF6DC;font-family:'Anton',sans-serif;font-size:13px;letter-spacing:1.5px;padding:12px;box-shadow:0 4px 0 rgba(32,29,26,.22);clip-path:polygon(0 16%,10% 4%,28% 13%,46% 3%,64% 12%,82% 4%,100% 10%,100% 84%,90% 96%,72% 87%,54% 97%,36% 88%,18% 97%,0 92%);">⬇ EXPORT CSV</button>
+                    <div style="font-size:11px;color:rgba(32,29,26,.5);margin-top:8px;">{{ downloadHint }}</div>
+                  </div>
+                </sc-if>
+              </div>
+
+              <!-- PROFESSIONAL SERVICES -->
+              <div style="background:#FAE78C;transform:rotate(.4deg);box-shadow:0 4px 0 rgba(32,29,26,.16);clip-path:polygon(0 2%,10% 0,25% 2%,40% 0,55% 2%,70% 0,85% 2%,100% 0,100% 98%,90% 100%,75% 98%,60% 100%,45% 98%,30% 100%,15% 98%,0 100%);">
+                <button onClick="{{ sec.services.onTap }}" style="width:100%;border:none;cursor:pointer;background:transparent;display:flex;align-items:center;gap:11px;padding:18px 16px 14px;text-align:left;">
+                  <span style="font-size:18px;">🎬</span>
+                  <span style="flex:1;font-family:'Anton',sans-serif;font-size:14px;letter-spacing:1.5px;color:#201D1A;">NEED PROFESSIONAL SERVICES?</span>
+                  <span style="font-family:'Anton',sans-serif;font-size:13px;color:#E0532F;">{{ sec.services.caret }}</span>
+                </button>
+                <sc-if value="{{ sec.services.open }}" hint-placeholder-val="{{ false }}">
+                  <div style="padding:0 16px 22px;animation:cpSlideUp .3s steps(4) both;">
+                    <div style="font-size:12.5px;line-height:1.55;color:rgba(32,29,26,.8);">Need an editor, a content strategist, or a full production day? The Clear Sky team takes on creator projects — from one-off edits to end-to-end campaigns.</div>
+                    <button onClick="{{ onServices }}" style="width:100%;margin-top:11px;border:none;cursor:pointer;background:#201D1A;color:#FAE78C;font-family:'Anton',sans-serif;font-size:13px;letter-spacing:1.5px;padding:12px;box-shadow:0 4px 0 rgba(32,29,26,.25);clip-path:polygon(0 16%,10% 4%,28% 13%,46% 3%,64% 12%,82% 4%,100% 10%,100% 84%,90% 96%,72% 87%,54% 97%,36% 88%,18% 97%,0 92%);">REQUEST A CALLBACK ▸</button>
+                  </div>
+                </sc-if>
+              </div>
+
+              <!-- DEACTIVATE -->
+              <div style="background:#FDFAF1;transform:rotate(-.4deg);box-shadow:0 4px 0 rgba(32,29,26,.13);clip-path:polygon(0 2%,10% 0,25% 2%,40% 0,55% 2%,70% 0,85% 2%,100% 0,100% 98%,90% 100%,75% 98%,60% 100%,45% 98%,30% 100%,15% 98%,0 100%);">
+                <button onClick="{{ sec.deactivate.onTap }}" style="width:100%;border:none;cursor:pointer;background:transparent;display:flex;align-items:center;gap:11px;padding:18px 16px 14px;text-align:left;">
+                  <span style="font-size:18px;">🚫</span>
+                  <span style="flex:1;font-family:'Anton',sans-serif;font-size:14px;letter-spacing:1.5px;color:#B3402A;">DEACTIVATE ACCOUNT</span>
+                  <span style="font-family:'Anton',sans-serif;font-size:13px;color:#E0532F;">{{ sec.deactivate.caret }}</span>
+                </button>
+                <sc-if value="{{ sec.deactivate.open }}" hint-placeholder-val="{{ false }}">
+                  <div style="padding:0 16px 22px;animation:cpSlideUp .3s steps(4) both;">
+                    <div style="font-size:12.5px;line-height:1.55;color:rgba(32,29,26,.75);">This wipes your reel — posts, notes, analytics and streaks. That&rsquo;s a wrap, for real. There&rsquo;s no undo.</div>
+                    <button onClick="{{ onDeactivate }}" style="width:100%;margin-top:11px;border:2px solid #B3402A;cursor:pointer;background:{{ deacBg }};color:{{ deacFg }};font-weight:800;font-size:12px;letter-spacing:1.5px;padding:11px;border-radius:10px;">{{ deacLabel }}</button>
+                  </div>
+                </sc-if>
+              </div>
+
+              <button onClick="{{ onResetDemo }}" style="border:none;cursor:pointer;background:transparent;color:#E0532F;font-weight:700;font-size:12.5px;letter-spacing:1px;padding:10px;text-decoration:underline;">RESET &amp; REPLAY ONBOARDING</button>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+
+      <!-- ===== TAB BAR ===== -->
+      <div style="flex:none;position:relative;background:#FDFAF1;padding:10px 8px 6px;display:flex;box-shadow:0 -3px 0 rgba(32,29,26,.08);clip-path:polygon(0 22%,4% 6%,10% 20%,17% 4%,25% 18%,33% 5%,41% 19%,50% 4%,59% 18%,67% 5%,75% 19%,83% 4%,90% 18%,96% 6%,100% 20%,100% 100%,0 100%);">
+        <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="5">
+          <button onClick="{{ t.onTap }}" style="flex:1;border:none;cursor:pointer;background:transparent;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 0 6px;">
+            <span style="font-size:19px;transform:rotate({{ t.tilt }});filter:{{ t.filter }};">{{ t.icon }}</span>
+            <span style="font-size:9px;font-weight:800;letter-spacing:1.2px;color:{{ t.color }};">{{ t.label }}</span>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ============ PHASE / POST SHEET ============ -->
+  <sc-if value="{{ sheetOn }}" hint-placeholder-val="{{ false }}">
+    <div data-screen-label="Phase Sheet" style="position:absolute;inset:0;z-index:70;background:rgba(32,29,26,.45);display:flex;align-items:flex-end;" onClick="{{ closeSheet }}">
+      <div onClick="{{ stopProp }}" style="width:100%;max-height:86%;overflow-y:auto;background:#F3EDE1;padding:20px 20px 30px;animation:cpSlideUp .35s steps(5) both;clip-path:polygon(0 3.5%,4% .8%,10% 3%,17% .5%,25% 2.8%,33% .8%,41% 3%,50% .5%,59% 2.8%,67% .8%,75% 3%,83% .5%,90% 2.8%,96% .8%,100% 3%,100% 100%,0 100%);">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span style="font-size:24px;">{{ sheetEmoji }}</span>
+          <div style="flex:1;">
+            <div style="font-family:'Anton',sans-serif;font-size:20px;letter-spacing:1.5px;">{{ sheetTitle }}</div>
+            <div style="font-family:'Yellowtail',cursive;font-size:16px;color:#E0532F;">{{ sheetKicker }}</div>
+          </div>
+          <button onClick="{{ closeSheet }}" style="border:none;cursor:pointer;background:rgba(32,29,26,.08);width:32px;height:32px;border-radius:50%;font-size:15px;font-weight:800;">✕</button>
+        </div>
+
+        <!-- research sheet -->
+        <sc-if value="{{ shResearch }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:16px;">
+            <div style="font-size:13px;line-height:1.5;color:rgba(32,29,26,.8);">Today's mission: <b>find 3 clips that stopped your scroll</b> and log what hooked you. Save them to the Research Room.</div>
+            <button onClick="{{ goResearchFromSheet }}" style="border:none;cursor:pointer;background:#35608F;color:#FDF6DC;font-family:'Anton',sans-serif;font-size:15px;letter-spacing:1.5px;padding:14px;box-shadow:0 4px 0 rgba(32,29,26,.2);clip-path:polygon(0 14%,8% 3%,23% 12%,39% 2%,54% 11%,70% 3%,85% 12%,100% 5%,100% 86%,92% 98%,76% 89%,60% 99%,44% 90%,28% 99%,12% 90%,0 98%);">OPEN RESEARCH ROOM ▸</button>
+            <button onClick="{{ sheetComplete }}" style="border:none;cursor:pointer;background:#E0532F;color:#FDF6DC;font-family:'Anton',sans-serif;font-size:15px;letter-spacing:1.5px;padding:14px;box-shadow:0 4px 0 rgba(32,29,26,.2);clip-path:polygon(0 14%,8% 3%,23% 12%,39% 2%,54% 11%,70% 3%,85% 12%,100% 5%,100% 86%,92% 98%,76% 89%,60% 99%,44% 90%,28% 99%,12% 90%,0 98%);">MARK RESEARCH DONE ✓</button>
+          </div>
+        </sc-if>
+
+        <!-- plan sheet -->
+        <sc-if value="{{ shPlan }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:16px;">
+            <div style="font-size:13px;line-height:1.5;color:rgba(32,29,26,.8);">Lock the slate: every post needs a <b>filming date, posting date, script and an inspo clip</b>.</div>
+            <button onClick="{{ goPlanFromSheet }}" style="border:none;cursor:pointer;background:#35608F;color:#FDF6DC;font-family:'Anton',sans-serif;font-size:15px;letter-spacing:1.5px;padding:14px;box-shadow:0 4px 0 rgba(32,29,26,.2);clip-path:polygon(0 14%,8% 3%,23% 12%,39% 2%,54% 11%,70% 3%,85% 12%,100% 5%,100% 86%,92% 98%,76% 89%,60% 99%,44% 90%,28% 99%,12% 90%,0 98%);">OPEN THE SLATE ▸</button>
+            <button onClick="{{ sheetComplete }}" style="border:none;cursor:pointer;background:#E0532F;color:#FDF6DC;font-family:'Anton',sans-serif;font-size:15px;letter-spacing:1.5px;padding:14px;box-shadow:0 4px 0 rgba(32,29,26,.2);clip-path:polygon(0 14%,8% 3%,23% 12%,39% 2%,54% 11%,70% 3%,85% 12%,100% 5%,100% 86%,92% 98%,76% 89%,60% 99%,44% 90%,28% 99%,12% 90%,0 98%);">MARK PLANNING DONE ✓</button>
+          </div>
+        </sc-if>
+
+        <!-- create sheet -->
+        <sc-if value="{{ shCreate }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:16px;">
+            <div style="font-size:13px;line-height:1.5;color:rgba(32,29,26,.8);">On the call sheet today:</div>
+            <sc-for list="{{ createTasks }}" as="ct" hint-placeholder-count="1">
+              <div style="background:#FDFAF1;border-radius:12px;padding:12px 14px;box-shadow:0 3px 0 rgba(32,29,26,.12);">
+                <div style="font-weight:700;font-size:14px;">{{ ct.title }}</div>
+                <div style="font-size:11.5px;color:rgba(32,29,26,.6);margin-top:2px;">{{ ct.meta }}</div>
+                <div style="display:flex;gap:8px;margin-top:10px;">
+                  <button onClick="{{ ct.onFilmed }}" style="flex:1;border:none;cursor:pointer;background:{{ ct.filmedBg }};color:{{ ct.filmedFg }};font-weight:800;font-size:11.5px;letter-spacing:1px;padding:9px;border-radius:9px;">🎬 FILMED</button>
+                  <button onClick="{{ ct.onEdited }}" style="flex:1;border:none;cursor:pointer;background:{{ ct.editedBg }};color:{{ ct.editedFg }};font-weight:800;font-size:11.5px;letter-spacing:1px;padding:9px;border-radius:9px;">✂️ EDITED</button>
+                </div>
+              </div>
+            </sc-for>
+            <button onClick="{{ sheetComplete }}" style="border:none;cursor:pointer;background:#E0532F;color:#FDF6DC;font-family:'Anton',sans-serif;font-size:15px;letter-spacing:1.5px;padding:14px;box-shadow:0 4px 0 rgba(32,29,26,.2);clip-path:polygon(0 14%,8% 3%,23% 12%,39% 2%,54% 11%,70% 3%,85% 12%,100% 5%,100% 86%,92% 98%,76% 89%,60% 99%,44% 90%,28% 99%,12% 90%,0 98%);">MARK CREATING DONE ✓</button>
+          </div>
+        </sc-if>
+
+        <!-- post sheet -->
+        <sc-if value="{{ shPost }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:12px;margin-top:16px;">
+            <div style="font-size:13px;line-height:1.5;color:rgba(32,29,26,.8);">Ready for the premiere: <b>{{ postTitle }}</b></div>
+            <div style="display:flex;flex-direction:column;gap:5px;">
+              <label style="font-size:10.5px;font-weight:800;letter-spacing:2px;color:#8A6E4B;">CAPTION</label>
+              <textarea value="{{ postCaption }}" onChange="{{ onPostCaption }}" rows="{{ three }}" placeholder="Write the caption that sells the story…" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:14px;padding:10px;resize:none;color:#201D1A;"></textarea>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:5px;">
+              <label style="font-size:10.5px;font-weight:800;letter-spacing:2px;color:#8A6E4B;">POST URL (after you upload)</label>
+              <input value="{{ postUrl }}" onChange="{{ onPostUrl }}" placeholder="https://instagram.com/p/…" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:14px;padding:10px;color:#201D1A;">
+            </div>
+            <button onClick="{{ onPublish }}" style="border:none;cursor:pointer;background:{{ publishBg }};color:#FDF6DC;font-family:'Anton',sans-serif;font-size:17px;letter-spacing:2px;padding:16px;box-shadow:0 5px 0 rgba(32,29,26,.25);clip-path:polygon(0 14%,8% 3%,23% 12%,39% 2%,54% 11%,70% 3%,85% 12%,100% 5%,100% 86%,92% 98%,76% 89%,60% 99%,44% 90%,28% 99%,12% 90%,0 98%);">🚀 CLICK PUBLISH</button>
+            <div style="font-size:11px;color:rgba(32,29,26,.55);text-align:center;">We'll ping you for 3 / 7 / 30-day analytics automatically.</div>
+          </div>
+        </sc-if>
+
+        <!-- analytics sheet -->
+        <sc-if value="{{ shAnalytics }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:12px;margin-top:16px;">
+            <div style="font-size:13px;line-height:1.5;color:rgba(32,29,26,.8);"><b>{{ anaTitle }}</b> hit its <b>{{ anaWindow }}</b> mark. Grab the numbers from the platform and log them:</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <div style="display:flex;flex-direction:column;gap:4px;"><label style="font-size:10px;font-weight:800;letter-spacing:1.5px;color:#8A6E4B;">VIEWS</label><input value="{{ anaViews }}" onChange="{{ onAnaViews }}" inputMode="numeric" placeholder="0" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:15px;padding:9px;color:#201D1A;"></div>
+              <div style="display:flex;flex-direction:column;gap:4px;"><label style="font-size:10px;font-weight:800;letter-spacing:1.5px;color:#8A6E4B;">LIKES</label><input value="{{ anaLikes }}" onChange="{{ onAnaLikes }}" inputMode="numeric" placeholder="0" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:15px;padding:9px;color:#201D1A;"></div>
+              <div style="display:flex;flex-direction:column;gap:4px;"><label style="font-size:10px;font-weight:800;letter-spacing:1.5px;color:#8A6E4B;">COMMENTS</label><input value="{{ anaComments }}" onChange="{{ onAnaComments }}" inputMode="numeric" placeholder="0" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:15px;padding:9px;color:#201D1A;"></div>
+              <div style="display:flex;flex-direction:column;gap:4px;"><label style="font-size:10px;font-weight:800;letter-spacing:1.5px;color:#8A6E4B;">SAVES / SHARES</label><input value="{{ anaSaves }}" onChange="{{ onAnaSaves }}" inputMode="numeric" placeholder="0" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:15px;padding:9px;color:#201D1A;"></div>
+            </div>
+            <button onClick="{{ onSaveAnalytics }}" style="border:none;cursor:pointer;background:#E0532F;color:#FDF6DC;font-family:'Anton',sans-serif;font-size:15px;letter-spacing:2px;padding:14px;box-shadow:0 4px 0 rgba(32,29,26,.2);clip-path:polygon(0 14%,8% 3%,23% 12%,39% 2%,54% 11%,70% 3%,85% 12%,100% 5%,100% 86%,92% 98%,76% 89%,60% 99%,44% 90%,28% 99%,12% 90%,0 98%);">LOG THE NUMBERS ✓</button>
+          </div>
+        </sc-if>
+
+        <!-- add note sheet -->
+        <sc-if value="{{ shNote }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:12px;margin-top:16px;">
+            <input value="{{ noteTitle }}" onChange="{{ onNoteTitle }}" placeholder="Note title…" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:15px;padding:11px;color:#201D1A;">
+            <textarea value="{{ noteBody }}" onChange="{{ onNoteBody }}" rows="{{ four }}" placeholder="Brain dump, voice-memo transcript, shot list…" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:14px;padding:11px;resize:none;color:#201D1A;"></textarea>
+            <button onClick="{{ onSaveNote }}" style="border:none;cursor:pointer;background:#E0532F;color:#FDF6DC;font-family:'Anton',sans-serif;font-size:15px;letter-spacing:2px;padding:14px;box-shadow:0 4px 0 rgba(32,29,26,.2);clip-path:polygon(0 14%,8% 3%,23% 12%,39% 2%,54% 11%,70% 3%,85% 12%,100% 5%,100% 86%,92% 98%,76% 89%,60% 99%,44% 90%,28% 99%,12% 90%,0 98%);">PIN IT TO THE BOARD ✓</button>
+          </div>
+        </sc-if>
+
+        <!-- add inspo sheet -->
+        <sc-if value="{{ shInspo }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:11px;margin-top:16px;">
+            <input value="{{ inspoTitle }}" onChange="{{ onInspoTitle }}" placeholder="Clip title / link…" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:15px;padding:11px;color:#201D1A;">
+            <input value="{{ inspoHook }}" onChange="{{ onInspoHook }}" placeholder="The hook — first 2 seconds…" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:14px;padding:11px;color:#201D1A;">
+            <input value="{{ inspoAction }}" onChange="{{ onInspoAction }}" placeholder="Action on screen…" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:14px;padding:11px;color:#201D1A;">
+            <input value="{{ inspoIdea }}" onChange="{{ onInspoIdea }}" placeholder="Quick idea to steal…" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:14px;padding:11px;color:#201D1A;">
+            <button onClick="{{ onSaveInspo }}" style="border:none;cursor:pointer;background:#E0532F;color:#FDF6DC;font-family:'Anton',sans-serif;font-size:15px;letter-spacing:2px;padding:14px;box-shadow:0 4px 0 rgba(32,29,26,.2);clip-path:polygon(0 14%,8% 3%,23% 12%,39% 2%,54% 11%,70% 3%,85% 12%,100% 5%,100% 86%,92% 98%,76% 89%,60% 99%,44% 90%,28% 99%,12% 90%,0 98%);">SAVE TO DATABASE ✓</button>
+          </div>
+        </sc-if>
+
+        <!-- post edit sheet -->
+        <sc-if value="{{ shPostEdit }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:11px;margin-top:16px;">
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <sc-for list="{{ epStatusOpts }}" as="st" hint-placeholder-count="4">
+                <button onClick="{{ st.onPick }}" style="border:none;cursor:pointer;font-size:10.5px;font-weight:800;letter-spacing:1px;color:{{ st.fg }};background:{{ st.bg }};padding:7px 12px;border-radius:99px;box-shadow:0 2px 0 rgba(32,29,26,.13);">{{ st.label }}</button>
+              </sc-for>
+            </div>
+            <input value="{{ epTitle }}" onChange="{{ onEpTitle }}" placeholder="Post title…" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:15px;padding:11px;color:#201D1A;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <div style="display:flex;flex-direction:column;gap:4px;"><label style="font-size:10px;font-weight:800;letter-spacing:1.5px;color:#8A6E4B;">🎬 FILMING DATE</label><input type="date" value="{{ epFilm }}" onChange="{{ onEpFilm }}" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:13px;padding:9px;color:#201D1A;"></div>
+              <div style="display:flex;flex-direction:column;gap:4px;"><label style="font-size:10px;font-weight:800;letter-spacing:1.5px;color:#8A6E4B;">🚀 POSTING DATE</label><input type="date" value="{{ epPost }}" onChange="{{ onEpPost }}" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:13px;padding:9px;color:#201D1A;"></div>
+            </div>
+            <textarea value="{{ epScript }}" onChange="{{ onEpScript }}" rows="{{ three }}" placeholder="Script / beats…" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:14px;padding:11px;resize:none;color:#201D1A;"></textarea>
+            <input value="{{ epInspo }}" onChange="{{ onEpInspo }}" placeholder="Inspo video…" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:14px;padding:11px;color:#201D1A;">
+            <sc-if value="{{ epIsPosted }}" hint-placeholder-val="{{ false }}">
+              <input value="{{ epUrl }}" onChange="{{ onEpUrl }}" placeholder="Post URL…" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:13px;padding:11px;color:#35608F;">
+              <div style="display:flex;gap:8px;">
+                <sc-for list="{{ epAnalytics }}" as="ea" hint-placeholder-count="3">
+                  <div style="flex:1;background:#F3EDE1;border-radius:10px;padding:9px 6px;text-align:center;">
+                    <div style="font-size:9px;font-weight:800;letter-spacing:1px;color:#8A6E4B;">{{ ea.label }}</div>
+                    <div style="font-family:'Anton',sans-serif;font-size:14px;color:#201D1A;margin-top:2px;">{{ ea.val }}</div>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-if>
+            <button onClick="{{ onSaveEdit }}" style="border:none;cursor:pointer;background:#E0532F;color:#FDF6DC;font-family:'Anton',sans-serif;font-size:15px;letter-spacing:2px;padding:14px;box-shadow:0 4px 0 rgba(32,29,26,.2);clip-path:polygon(0 14%,8% 3%,23% 12%,39% 2%,54% 11%,70% 3%,85% 12%,100% 5%,100% 86%,92% 98%,76% 89%,60% 99%,44% 90%,28% 99%,12% 90%,0 98%);">SAVE CHANGES ✓</button>
+          </div>
+        </sc-if>
+
+        <!-- plan form sheet -->
+        <sc-if value="{{ shPlanForm }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:11px;margin-top:16px;">
+            <input value="{{ pfTitle }}" onChange="{{ onPfTitle }}" placeholder="Post title…" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:15px;padding:11px;color:#201D1A;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <div style="display:flex;flex-direction:column;gap:4px;"><label style="font-size:10px;font-weight:800;letter-spacing:1.5px;color:#8A6E4B;">🎬 FILMING DATE</label><input type="date" value="{{ pfFilm }}" onChange="{{ onPfFilm }}" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:13px;padding:9px;color:#201D1A;"></div>
+              <div style="display:flex;flex-direction:column;gap:4px;"><label style="font-size:10px;font-weight:800;letter-spacing:1.5px;color:#8A6E4B;">🚀 POSTING DATE</label><input type="date" value="{{ pfPost }}" onChange="{{ onPfPost }}" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:13px;padding:9px;color:#201D1A;"></div>
+            </div>
+            <textarea value="{{ pfScript }}" onChange="{{ onPfScript }}" rows="{{ three }}" placeholder="Script / beats…" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:14px;padding:11px;resize:none;color:#201D1A;"></textarea>
+            <input value="{{ pfInspo }}" onChange="{{ onPfInspo }}" placeholder="Inspo video (from Research Room)…" style="border:2px solid #D9CBAF;border-radius:10px;background:#FDFAF1;font-size:14px;padding:11px 12px;color:#201D1A;">
+            <div>
+              <div style="font-size:10.5px;font-weight:800;letter-spacing:2px;color:#8A6E4B;">📝 TIE A RESEARCH ROOM PAGE</div>
+              <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:7px;">
+                <sc-for list="{{ pfNoteOpts }}" as="no" hint-placeholder-count="3">
+                  <button onClick="{{ no.onPick }}" style="border:none;cursor:pointer;font-size:11.5px;font-weight:700;color:{{ no.fg }};background:{{ no.bg }};padding:6px 11px;border-radius:99px;box-shadow:0 2px 0 rgba(32,29,26,.13);">{{ no.label }}</button>
+                </sc-for>
+              </div>
+            </div>
+            <button onClick="{{ onSavePlan }}" style="border:none;cursor:pointer;background:#E0532F;color:#FDF6DC;font-family:'Anton',sans-serif;font-size:15px;letter-spacing:2px;padding:14px;box-shadow:0 4px 0 rgba(32,29,26,.2);clip-path:polygon(0 14%,8% 3%,23% 12%,39% 2%,54% 11%,70% 3%,85% 12%,100% 5%,100% 86%,92% 98%,76% 89%,60% 99%,44% 90%,28% 99%,12% 90%,0 98%);">ADD TO THE SLATE ✓</button>
+          </div>
+        </sc-if>
+
+        <!-- invite sheet -->
+        <sc-if value="{{ shInvite }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:12px;margin-top:16px;align-items:center;text-align:center;">
+            <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184157_722c072b-d95a-4952-93a2-31a94f4f2a91.png" alt="lovers" style="width:190px;transform:rotate(-2deg);filter:drop-shadow(0 8px 10px rgba(32,29,26,.3));">
+            <div style="font-size:13px;line-height:1.5;color:rgba(32,29,26,.8);">Accountability is better as a double feature. Send your co-star a ticket:</div>
+            <div style="font-size:13px;font-weight:700;color:#35608F;background:#FDFAF1;border-radius:10px;padding:10px 14px;font-family:ui-monospace,monospace;">clickpublish.app/join/{{ profSlug }}</div>
+            <button onClick="{{ onCopyInvite }}" style="width:100%;border:none;cursor:pointer;background:#E0532F;color:#FDF6DC;font-family:'Anton',sans-serif;font-size:15px;letter-spacing:2px;padding:14px;box-shadow:0 4px 0 rgba(32,29,26,.2);clip-path:polygon(0 14%,8% 3%,23% 12%,39% 2%,54% 11%,70% 3%,85% 12%,100% 5%,100% 86%,92% 98%,76% 89%,60% 99%,44% 90%,28% 99%,12% 90%,0 98%);">{{ inviteBtnLabel }}</button>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ============ CELEBRATION OVERLAY ============ -->
+  <sc-if value="{{ celebOn }}" hint-placeholder-val="{{ false }}">
+    <div data-screen-label="Celebration" onClick="{{ closeCeleb }}" style="position:absolute;inset:0;z-index:90;cursor:pointer;overflow:hidden;background-image:url('{{ celebBg }}');background-size:cover;background-position:center;">
+      <div style="position:absolute;inset:0;background:rgba(32,29,26,.12);"></div>
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184337_7b89348a-3388-4d7c-9d76-42ed4113486c.png" alt="" style="position:absolute;top:110px;left:-24px;width:110px;animation:cpFloat 6s ease-in-out infinite;pointer-events:none;filter:drop-shadow(0 5px 7px rgba(32,29,26,.2));">
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184337_7b89348a-3388-4d7c-9d76-42ed4113486c.png" alt="" style="position:absolute;top:64px;right:-28px;width:92px;transform:scaleX(-1);animation:cpDriftSlow 8s ease-in-out infinite;pointer-events:none;opacity:.9;">
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184329_632524bf-ba57-4e16-9059-5413dd96c43a.png" alt="" style="position:absolute;bottom:-14px;left:0;width:130%;max-width:none;pointer-events:none;filter:drop-shadow(0 -4px 8px rgba(32,29,26,.18));">
+      <div style="position:absolute;left:0;right:0;top:{{ celebImgTop }};display:flex;justify-content:center;pointer-events:none;">{{ celebImgEl }}</div>
+      <div style="position:absolute;left:0;right:0;top:14%;text-align:center;pointer-events:none;">
+        <div style="font-family:'Anton',sans-serif;font-size:42px;line-height:1;color:#FAE78C;letter-spacing:2px;animation:cpGlow 2s ease-in-out infinite;">{{ celebTitle }}</div>
+        <div style="font-family:'Yellowtail',cursive;font-size:24px;color:#FDF6DC;margin-top:8px;transform:rotate(-2deg);">{{ celebSub }}</div>
+      </div>
+      <sc-for list="{{ confetti }}" as="cf" hint-placeholder-count="0">
+        <span style="position:absolute;top:-20px;left:{{ cf.left }};width:{{ cf.size }};height:{{ cf.size }};background:{{ cf.color }};transform:rotate(20deg);animation:cpConfetti {{ cf.dur }} steps(14) {{ cf.delay }} both;"></span>
+      </sc-for>
+      <div style="position:absolute;bottom:26px;left:0;right:0;text-align:center;font-size:11px;letter-spacing:3px;color:rgba(253,246,220,.9);font-weight:700;pointer-events:none;">TAP TO CONTINUE</div>
+      <div style="position:absolute;inset:0;background:#FDF6DC;animation:cpFlash .45s steps(4) both;pointer-events:none;"></div>
+    </div>
+  </sc-if>
+
+  <!-- toast -->
+  <sc-if value="{{ toastOn }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;left:50%;bottom:96px;transform:translateX(-50%) rotate(-1deg);z-index:95;background:#201D1A;color:#FAE78C;font-weight:700;font-size:12.5px;padding:11px 18px;box-shadow:0 4px 0 rgba(32,29,26,.3);animation:cpPop .3s steps(4) both;white-space:nowrap;">{{ toastMsg }}</div>
+  </sc-if>
+
+</div>
+</x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:520,&quot;height&quot;:940},&quot;skipOnboarding&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Prototype&quot;},&quot;celebrationStyle&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;surprise&quot;,&quot;memes&quot;,&quot;rocket&quot;,&quot;cowboy&quot;,&quot;lovers&quot;,&quot;jump&quot;,&quot;sunrise&quot;,&quot;paparazzi&quot;,&quot;headliner&quot;,&quot;plane&quot;,&quot;car&quot;],&quot;default&quot;:&quot;surprise&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Customization&quot;}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    const saved = this.load();
+    this.state = saved || this.freshState();
+    if (this.props.skipOnboarding && this.state.screen !== 'app') {
+      this.state = Object.assign(this.freshState(), { screen: 'app' });
+      Object.assign(this.state, this.demoData());
+    }
+  }
+
+  freshState() {
+    return {
+      screen: 'splash', // splash|auth|quiz|pick|launch|app
+      tab: 'today',
+      authName: '', authEmail: '', authPass: '',
+      qIndex: 0, answers: {}, trans: null, nicheOpen: null,
+      tourIndex: 0, tutorialDone: false, phaseOpen: null,
+      metrics: { followers: 0, monthImpressions: 0 },
+      challenge: null,
+      celebStyle: this.props.celebrationStyle || 'surprise',
+      soundOn: true, profOpen: null, deacArmed: false,
+      calOff: 0, calSel: null, riskWindow: 7,
+      chartRange: 6, chartMetric: 'followers', researchQ: '', hidePosted: false, lastFollowerUpdate: null,
+      avatar: null, avatarData: null, tasksOpen: true, editPostId: null,
+      monthHistory: [],
+      checklist: { research: false, plan: false, create: false, post: false },
+      streak: 7, chDay: 12, chTotal: 30,
+      posts: [], inspo: [], notes: [], bulletins: [], leaders: [],
+      sheet: null, sheetPost: null, sheetDue: null,
+      celeb: null, toast: null, invited: false,
+      forms: { caption: '', url: '', views: '', likes: '', comments: '', saves: '',
+        noteTitle: '', noteBody: '', inspoTitle: '', inspoHook: '', inspoAction: '', inspoIdea: '',
+        pfTitle: '', pfFilm: '', pfPost: '', pfScript: '', pfInspo: '', pfNote: '',
+        epTitle: '', epFilm: '', epPost: '', epScript: '', epInspo: '', epUrl: '', epStatus: 'planned' }
+    };
+  }
+
+  demoData() {
+    const d = (off) => { const t = new Date(); t.setDate(t.getDate() + off); return t.toISOString().slice(0, 10); };
+    return {
+      checklist: { research: true, plan: true, create: false, post: false },
+      posts: [
+        { id: 1, title: 'POV: your first golden hour shoot', platform: 'IG REELS', filmDate: d(-14), postDate: d(-12), script: 'Open on lens flare → 3 quick cuts of setup → voiceover about patience.', inspo: '"Golden Hour Guide" — @filmlooks', status: 'posted', postedAt: d(-3), url: 'instagram.com/p/cg8x2', analytics: { d3: null, d7: null, d30: null } },
+        { id: 2, title: 'What I pack for a one-person shoot', platform: 'TIKTOK', filmDate: d(-10), postDate: d(-7), script: 'Bag dump on kraft paper, stop-motion items sliding in one by one.', inspo: '"Bag dump ASMR" — @setlifegrl', status: 'posted', postedAt: d(-7), url: 'tiktok.com/@rae/vid/88213', analytics: { d3: { views: 4210, likes: 388, comments: 41, saves: 97 }, d7: null, d30: null } },
+        { id: 3, title: 'Cutting a 60s story in CapCut', platform: 'YOUTUBE', filmDate: d(-2), postDate: d(0), script: 'Screen record + face cam. Hook: "This edit took 11 minutes."', inspo: '"11-minute edit" — @editburst', status: 'edited', postedAt: null, url: '', analytics: { d3: null, d7: null, d30: null } },
+        { id: 4, title: 'Why I almost quit posting', platform: 'IG REELS', filmDate: d(2), postDate: d(4), script: 'Talking head, b-roll of old drafts folder, honest VO.', inspo: '"Draft graveyard" — @creatordiary', status: 'planned', postedAt: null, url: '', analytics: { d3: null, d7: null, d30: null } },
+        { id: 5, title: '3 hooks that doubled my reach', platform: 'TIKTOK', filmDate: d(-48), postDate: d(-45), script: 'Rapid-fire hook demos, jump cuts, on-screen counters.', inspo: '"Hook stacking" — @editburst', status: 'posted', postedAt: d(-45), url: 'tiktok.com/@rae/vid/71002', analytics: { d3: { views: 18400, likes: 2210, comments: 184, saves: 903 }, d7: { views: 31200, likes: 3480, comments: 260, saves: 1450 }, d30: { views: 54200, likes: 5120, comments: 391, saves: 2210 } } },
+        { id: 6, title: 'My $0 studio lighting setup', platform: 'IG REELS', filmDate: d(-70), postDate: d(-66), script: 'Window light demo, before/after split screen.', inspo: '"Budget light" — @filmlooks', status: 'posted', postedAt: d(-66), url: 'instagram.com/p/bx91k', analytics: { d3: { views: 9600, likes: 1020, comments: 88, saves: 415 }, d7: { views: 15800, likes: 1590, comments: 121, saves: 640 }, d30: { views: 22400, likes: 2050, comments: 149, saves: 830 } } }
+      ],
+      inspo: [
+        { id: 1, platform: 'TIKTOK', title: '"11-minute edit" — @editburst', hook: 'Text: "This edit took 11 minutes" over messy timeline', action: 'Speed-ramped screen record, cuts on every beat', idea: 'Do it with my golden-hour footage' },
+        { id: 2, platform: 'IG REELS', title: '"Golden Hour Guide" — @filmlooks', hook: 'Lens flare wipes into the subject\u2019s face', action: 'Slow push-in, warm LUT, film grain overlay', idea: 'Recreate with the vintage car at sunset' },
+        { id: 3, platform: 'YOUTUBE', title: '"Bag dump ASMR" — @setlifegrl', hook: 'Zipper sound, then total silence', action: 'Top-down stop-motion, items slide in one by one', idea: 'Same but with editing shortcuts as props' }
+      ],
+      notes: [
+        { id: 1, type: 'voice', title: 'Voice memo — car ride idea', date: 'Jul 14', body: '"…what if the whole series is shot like old postcards? Torn edges, stamp in the corner, VO like a letter home…"' },
+        { id: 2, type: 'note', title: 'Hooks that stopped my scroll', date: 'Jul 13', body: '1. Silence then loud cut. 2. Hand covers lens → reveal. 3. Text contradicts the visual.' },
+        { id: 3, type: 'note', title: 'Shot list — Thursday', date: 'Jul 12', body: 'Golden hour rooftop, 3 outfits, tripod wide + phone close. Backup: window light at home.' }
+      ],
+      bulletins: [
+        { id: 1, title: 'August challenge drops Friday 🎬', date: 'Jul 14', body: 'The "Hook Lab" challenge goes live this Friday — 21 days, one hook style per day. Early birds get the Clear Sky preset pack.' },
+        { id: 2, title: 'Office hours with the Clear Sky team', date: 'Jul 10', body: 'Bring one rough cut to Thursday\u2019s call and we\u2019ll workshop the first 3 seconds live.' },
+        { id: 3, title: 'Creator spotlight: Maya R.', date: 'Jul 7', body: 'Maya finished the 30-Day Challenge with a 4.2x reach jump. Her secret? She never skipped Research day.' }
+      ],
+      metrics: { followers: 3240, monthImpressions: 41800 },
+      lastFollowerUpdate: d(-32),
+      monthHistory: Array.from({ length: 12 }, (_, i) => {
+        const dt = new Date(); dt.setMonth(dt.getMonth() - (11 - i));
+        return { label: dt.toLocaleDateString('en-US', { month: 'short' }).toUpperCase(),
+          followers: [420, 610, 850, 1080, 1320, 1610, 1890, 2140, 2430, 2760, 3010, 3240][i],
+          impressions: [6200, 8400, 9100, 12800, 11400, 15600, 18900, 22400, 26100, 31800, 36500, 41800][i] };
+      }),
+      leaders: [
+        { name: 'Maya R.', detail: '30-Day Challenge · 21 day streak', score: 2140 },
+        { name: 'You', detail: '30-Day Challenge · 7 day streak', score: 1180, me: true },
+        { name: 'Deshawn K.', detail: '7 Day Blitz · 5 day streak', score: 990 },
+        { name: 'Lena T.', detail: '3 Days a Week · 12 posts', score: 940 },
+        { name: 'Marco P.', detail: 'Weekend Warrior · 8 posts', score: 610 }
+      ]
+    };
+  }
+
+  // ---------- persistence ----------
+  load() { try { const raw = localStorage.getItem('clickpublish_v2'); if (!raw) return null; const fresh = this.freshState(); const saved = JSON.parse(raw); const merged = Object.assign(fresh, saved); merged.forms = Object.assign({}, this.freshState().forms, saved.forms || {}); return merged; } catch (e) { return null; } }
+  save() { try { const s = Object.assign({}, this.state, { trans: null, celeb: null, sheet: null, toast: null }); localStorage.setItem('clickpublish_v2', JSON.stringify(s)); } catch (e) {} }
+  componentDidUpdate() { this.save(); }
+
+  // ---------- sound (removed by request; keep call sites harmless) ----------
+  sfx() {}
+
+  // ---------- constants ----------
+  IMG() {
+    return {
+      sky: 'https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_182045_ca43f9bb-f0d2-4a06-8d08-52dc89a5d279.png',
+      rocket: 'https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_182058_ac4c956c-57d5-4c0e-b58d-48791d661a08.png',
+      rocketCut: 'https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184239_c020193e-a407-47e0-b7c5-67c5d30b0d4f.png',
+      cowboyCut: 'https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184240_7b0d2bdb-c489-4098-b54b-da919aa8d3cc.png',
+      loversCut: 'https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184157_722c072b-d95a-4952-93a2-31a94f4f2a91.png',
+      jumpCut: 'https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184218_207c94c7-8e0c-45b2-bb60-eeb3a9226587.png',
+      carCut: 'https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184216_55619acd-9d2a-4e25-a7e0-e4b0d5f51f5e.png',
+      planeCut: 'https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184327_b7479e17-9fce-426d-aa2e-7ab96aaa2c6a.png',
+      sunCut: 'https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184323_26d245c4-7809-43c7-9614-d64df798b93a.png',
+      grannyCut: 'https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184212_e4d6c999-5939-4583-b91c-b448b606124b.png',
+      camCut: 'https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_184214_3f9c4fbf-2a7c-441b-9adb-96cead270281.png',
+      cowboy: 'https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_182100_d8679797-5faf-4e7b-9657-1bca446b9a7b.png',
+      lovers: 'https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_182102_cd740b9a-6a84-4f70-ae61-d89c018ef311.png',
+      granny: 'https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_182104_208401f0-d1fc-4489-b3e4-5f227580b73e.png',
+      camera: 'https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_182105_89057677-a617-4c07-ae33-0afebb25b8cc.png',
+      car: 'https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_182107_90d96355-bc4a-4d45-97de-fa5bc19c5c7d.png',
+      jump: 'https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_182109_946b7b36-c6b2-40a8-8660-acd8cddf1dd3.png'
+    };
+  }
+
+  TORN() { return 'polygon(2% 3%,10% 0,22% 4%,35% 1%,48% 5%,62% 1%,75% 4%,88% 0,98% 3%,100% 12%,97% 25%,100% 38%,97% 52%,100% 66%,97% 80%,100% 92%,90% 100%,76% 96%,62% 100%,48% 97%,34% 100%,20% 96%,8% 100%,0 94%,2% 80%,0 65%,3% 50%,0 36%,3% 22%,0 10%)'; }
+
+  QUESTIONS() {
+    return [
+      { key: 'brand', kicker: 'scene one', title: 'WHO\u2019S ON THE MARQUEE?', sub: 'Are you building a personal brand or a company brand?', multi: false,
+        opts: [['⭐', 'Personal brand'], ['🏢', 'Company brand']] },
+      { key: 'niche', type: 'niche', kicker: 'scene two', title: 'WHAT\u2019S YOUR NICHE?', sub: 'Open the categories and pick every lane you play in — mix and match.' },
+      { key: 'platforms', kicker: 'scene three', title: 'WHERE DO YOU WANT TO SHINE?', sub: 'Choose every stage you\u2019ll play. Pick as many as you like.', multi: true,
+        opts: [['📸', 'Instagram'], ['🎵', 'TikTok'], ['▶️', 'YouTube'], ['🕊', 'X / Threads'], ['📌', 'Pinterest'], ['💼', 'LinkedIn']] },
+      { key: 'cadence', type: 'cadence', kicker: 'scene four', title: 'SET YOUR CADENCE', sub: 'Dial in your custom rhythm — be honest, consistency beats intensity.' },
+      { key: 'targets', type: 'targets', kicker: 'scene five', title: 'SET YOUR TARGETS', sub: 'Type your follower goal and monthly impressions goal. We\u2019ll keep score.' },
+      { key: 'baseline', type: 'baseline', kicker: 'scene six', title: 'WHERE ARE WE STARTING?', sub: 'Your numbers today — the opening frame of the story.' }
+    ];
+  }
+
+  NICHES() {
+    return [
+      ['🎬', 'Film & Photo', ['Filmmaking', 'Photography', 'Video editing', 'Color grading', 'Drone content', 'Wedding video', 'Documentary', 'Music videos', 'VFX & motion', 'Analog film', 'Behind the scenes', 'Portrait photography']],
+      ['💄', 'Beauty & Fashion', ['Makeup', 'Skincare', 'Haircare', 'Nails', 'Streetwear', 'Thrift & vintage', 'Luxury fashion', 'Modest fashion', 'Menswear', 'Sneakers', 'Jewelry', 'Sustainable fashion']],
+      ['💪', 'Health & Fitness', ['Gym & lifting', 'Yoga', 'Running', 'CrossFit', 'Home workouts', 'Nutrition', 'Weight loss', 'Martial arts', 'Pilates', 'Mobility', 'Mental health', 'Sleep & recovery']],
+      ['🍳', 'Food & Drink', ['Recipes', 'Baking', 'Meal prep', 'Vegan cooking', 'BBQ & grilling', 'Coffee', 'Cocktails', 'Restaurant reviews', 'Food science', 'Fermentation', 'Budget meals', 'Street food']],
+      ['💼', 'Business & Money', ['Entrepreneurship', 'Marketing', 'Sales', 'Personal finance', 'Investing', 'Real estate', 'E-commerce', 'Side hustles', 'Career advice', 'Freelancing', 'Copywriting', 'Public speaking']],
+      ['🎮', 'Tech & Gaming', ['Gaming', 'Tech reviews', 'AI tools', 'Coding', 'Web design', 'Crypto', 'Gadgets', 'Streaming setup', 'Esports', 'App builds', 'Photography gear', '3D printing']],
+      ['🌍', 'Travel & Outdoors', ['Travel vlogs', 'Budget travel', 'Van life', 'Hiking', 'Camping', 'Overlanding', 'Solo travel', 'Family travel', 'Surf & ocean', 'National parks', 'Fishing', 'Snow sports']],
+      ['🏡', 'Home & Lifestyle', ['Interior design', 'DIY & renovation', 'Organization', 'Gardening', 'Homesteading', 'Minimalism', 'Parenting', 'Pets & dogs', 'Cleaning', 'Woodworking', 'Car culture', 'Weddings & events']],
+      ['🎨', 'Arts & Music', ['Music production', 'Songwriting', 'Drawing & illustration', 'Painting', 'Pottery', 'Crafts', 'Dance', 'Tattoo art', 'Graphic design', 'Calligraphy', 'Acting', 'Fashion design']],
+      ['📚', 'Education & Ideas', ['Study & productivity', 'Language learning', 'Science', 'History', 'Books & reading', 'Philosophy', 'Psychology', 'Self-improvement', 'Spirituality', 'Comedy & skits', 'News & commentary', 'True crime']]
+    ];
+  }
+
+  GIFS() {
+    return {
+      gatsby: 'https://media.giphy.com/media/g9582DNuQppxC/giphy.gif',
+      minions: 'https://media.giphy.com/media/11sBLVxNs7v6WA/giphy.gif',
+      fireworks: 'https://media.giphy.com/media/26tOZ42Mg6pbTUPHW/giphy.gif',
+      confettigif: 'https://media.giphy.com/media/1xxzHNqzoL0wsXoOPU/giphy.gif',
+      office: 'https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif',
+      highfive: 'https://media.giphy.com/media/blSTtZehjAZ8I/giphy.gif',
+      kid: 'https://media.giphy.com/media/YTbZzCkRQCEJa/giphy.gif',
+      sponge: 'https://media.giphy.com/media/26u4lOMA8JKSnL9Uk/giphy.gif'
+    };
+  }
+
+  CHALLENGES() {
+    return [
+      { id: 'c30', emoji: '🎬', title: '30 DAY CHALLENGE', desc: 'Build the habit. See the results.', tag: '30 DAYS', total: 30, bg: '#FDFAF1', fg: '#201D1A' },
+      { id: 'c7', emoji: '⚡', title: '7 DAY BLITZ', desc: 'Short burst. Get off the ground.', tag: '7 DAYS', total: 7, bg: '#E0532F', fg: '#FDF6DC' }
+    ];
+  }
+
+  TOUR() {
+    const I = this.IMG();
+    return [
+      { emoji: '🎬', img: I.jumpCut, title: 'YOUR DAILY TASKS', text: 'Research, Plan, Create, Post — your daily call sheet lives on the Today tab. Tap a phase to expand it, complete the task, and check it off!' },
+      { emoji: '🔍', img: I.grannyCut, title: 'THE RESEARCH ROOM', text: 'Save inspo clips with their hook, on-screen action and a quick idea to steal — plus notes and voice-memo transcripts. The chicken scratch where ideas are born!' },
+      { emoji: '🗓', img: I.camCut, title: 'THE SLATE', text: 'Every post gets a filming date, a posting date, a script and an inspo clip. Whatever\u2019s slated for today shows up in Create.' },
+      { emoji: '🚀', img: I.rocketCut, title: 'POST & KEEP SCORE', text: 'Publish, paste the URL, and we\u2019ll ping you for 3, 7 and 30-day analytics check-ins. The Scoreboard tracks your follower and impressions goals.' },
+      { emoji: '🏆', img: I.loversCut, title: 'THE LOT', text: 'Join Clear Sky challenges, read the bulletin, invite friends and race them up the leaderboard.' }
+    ];
+  }
+
+  // ---------- helpers ----------
+  set(patch, cb) { this.setState(patch, cb); }
+  setAnswer(key, val) { this.setState(s => ({ answers: Object.assign({}, s.answers, { [key]: val }) })); }
+  fmt(n) { return (n || 0).toLocaleString('en-US'); }
+  fmtK(n) { return n >= 10000 ? Math.round(n / 1000) + 'K' : (n >= 1000 ? (Math.round(n / 100) / 10) + 'K' : String(n)); }
+  parseGoal(str, fallback) {
+    const raw = String(str || '').trim().toUpperCase();
+    const n = parseInt(raw.replace(/[^0-9]/g, ''), 10);
+    if (!(n > 0)) return fallback;
+    if (/\d\s*M/.test(raw)) return n * 1000000;
+    if (/\d\s*K/.test(raw)) return n * 1000;
+    return n;
+  }
+  setForm(key, val) { this.setState(s => ({ forms: Object.assign({}, s.forms, { [key]: val }) })); }
+  field(key) { return (e) => this.setForm(key, e.target.value); }
+  toast(msg) {
+    clearTimeout(this._toastT);
+    this.set({ toast: msg });
+    this._toastT = setTimeout(() => this.set({ toast: null }), 2200);
+  }
+  exportCSV() {
+    const s = this.state;
+    const esc = (v) => {
+      v = (v == null ? '' : String(v));
+      return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
+    };
+    const cols = ['Title', 'Status', 'Platform', 'Filming date', 'Posting date', 'Script', 'Inspo', 'URL',
+      '3d views', '3d likes', '7d views', '7d likes', '30d views', '30d likes'];
+    const rows = (s.posts || []).map(p => {
+      const a = p.analytics || {};
+      const v = (k, f) => (a[k] && a[k][f] != null ? a[k][f] : '');
+      return [p.title, p.status, p.platform, p.filmDate, p.postDate, p.script, p.inspo, p.url,
+        v('d3', 'views'), v('d3', 'likes'), v('d7', 'views'), v('d7', 'likes'), v('d30', 'views'), v('d30', 'likes')].map(esc).join(',');
+    });
+    const csv = cols.join(',') + '\n' + rows.join('\n');
+    try {
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'click-publish-data.csv';
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      this.toast('CSV exported — check your downloads 📥');
+    } catch (e) {
+      this.toast('Export failed — try again');
+    }
+  }
+  fmtDate(iso) {
+    if (!iso) return '—';
+    const dt = new Date(iso + 'T12:00:00');
+    return dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  }
+  daysSince(iso) { if (!iso) return 0; return Math.floor((Date.now() - new Date(iso + 'T12:00:00').getTime()) / 86400000); }
+
+  celebrate(motifKey, title, sub, sound) {
+    const I = this.IMG();
+    const style = this.state.celebStyle || 'surprise';
+    if (style === 'memes') motifKey = this.nextMotif();
+    else if (style !== 'surprise') motifKey = style;
+    const G = this.GIFS();
+    const motifs = {
+      rocket: { img: I.rocketCut, top: '18%', w: '240px', anim: 'cpRocket 2.2s steps(16) both' },
+      cowboy: { img: I.cowboyCut, top: '32%', w: '260px', anim: 'cpPop .6s steps(5) both, cpJitter 1.2s steps(2) .6s infinite' },
+      lovers: { img: I.loversCut, top: '36%', w: '250px', anim: 'cpPop .7s steps(6) both, cpFloat 4s ease-in-out .7s infinite' },
+      jump: { img: I.jumpCut, top: '32%', w: '220px', anim: 'cpPop .55s steps(5) both, cpFloat 3.4s ease-in-out .6s infinite' },
+      car: { img: I.carCut, top: '42%', w: '280px', anim: 'cpDrive 2s steps(16) both' },
+      plane: { img: I.planeCut, top: '34%', w: '230px', anim: 'cpPlane 1.8s steps(14) both' },
+      sunrise: { img: I.sunCut, top: '30%', w: '240px', anim: 'cpSunrise 1.6s steps(12) both' },
+      paparazzi: { img: I.camCut, top: '32%', w: '230px', anim: 'cpPop .5s steps(5) both, cpJitter .9s steps(2) .5s infinite', flash: true },
+      headliner: { img: I.grannyCut, top: '28%', w: '240px', anim: 'cpPop .6s steps(5) both, cpFloat 3.6s ease-in-out .6s infinite' },
+      gatsby: { gif: G.gatsby, top: '30%' }, minions: { gif: G.minions, top: '30%' },
+      fireworks: { gif: G.fireworks, top: '30%' }, confettigif: { gif: G.confettigif, top: '30%' },
+      office: { gif: G.office, top: '30%' }, highfive: { gif: G.highfive, top: '30%' },
+      kid: { gif: G.kid, top: '30%' }, sponge: { gif: G.sponge, top: '30%' }
+    };
+    const m = motifs[motifKey] || motifs.rocket;
+    const colors = ['#E0532F', '#FAE78C', '#35608F', '#FDFAF1', '#F2A0B5'];
+    const confetti = Array.from({ length: 26 }, (_, i) => ({
+      left: (Math.random() * 96 + 2).toFixed(1) + '%',
+      size: (Math.random() * 8 + 6).toFixed(0) + 'px',
+      color: colors[i % colors.length],
+      dur: (Math.random() * 1.4 + 1.6).toFixed(2) + 's',
+      delay: (Math.random() * .8).toFixed(2) + 's'
+    }));
+    this.sfx(sound || 'fanfare');
+    this.set({ celeb: { motif: m, title: title, sub: sub, confetti: confetti } });
+  }
+
+  nextMotif() {
+    const style = this.state.celebStyle || 'surprise';
+    const gifs = ['gatsby', 'minions', 'fireworks', 'confettigif', 'office', 'highfive', 'kid', 'sponge'];
+    const all = ['rocket', 'gatsby', 'cowboy', 'minions', 'lovers', 'fireworks', 'jump', 'confettigif', 'car', 'office', 'plane', 'highfive', 'sunrise', 'paparazzi', 'headliner', 'kid', 'sponge'];
+    const list = style === 'memes' ? gifs : (style !== 'surprise' ? [style] : all);
+    this._motifI = ((this._motifI || 0) + 1) % list.length;
+    return list[this._motifI];
+  }
+
+  // ---------- flows ----------
+  startApp = () => { this.sfx('whoosh'); this.set({ screen: 'auth' }); };
+  createAccount = () => {
+    if (!this.state.authName.trim()) { this.toast('Give us your stage name first ✎'); return; }
+    this.sfx('ding'); this.set({ screen: 'quiz', qIndex: 0 });
+  };
+  pickOption = (q, label) => {
+    this.sfx('pick');
+    const answers = Object.assign({}, this.state.answers);
+    if (q.multi) {
+      const cur = answers[q.key] || [];
+      answers[q.key] = cur.includes(label) ? cur.filter(x => x !== label) : cur.concat([label]);
+      this.set({ answers: answers });
+    } else {
+      answers[q.key] = label;
+      this.set({ answers: answers });
+      setTimeout(() => this.advanceQuiz(), 220);
+    }
+  };
+  advanceQuiz = () => {
+    const qs = this.QUESTIONS();
+    const i = this.state.qIndex;
+    this.sfx('whoosh');
+    if (i + 1 < qs.length) this.set({ qIndex: i + 1 });
+    else this.set({ screen: 'pick' });
+  };
+  pickChallenge = (ch) => {
+    this.set({ challenge: ch, chTotal: ch ? ch.total : 30, chDay: 1, streak: 0, screen: 'launch' });
+    setTimeout(() => {
+      const total = ch ? ch.total : 30;
+      const day = Math.min(12, Math.max(1, total - 2));
+      const demo = this.demoData();
+      demo.chDay = day; demo.streak = Math.min(7, day);
+      const ans = this.state.answers;
+      if (ans.curFollowers || ans.curImpressions) {
+        demo.metrics = { followers: parseInt(ans.curFollowers || '0', 10) || 0, monthImpressions: parseInt(ans.curImpressions || '0', 10) || 0 };
+        demo.lastFollowerUpdate = new Date().toISOString().slice(0, 10);
+        const scaleF = demo.metrics.followers / 3240, scaleI = demo.metrics.monthImpressions / 41800;
+        demo.monthHistory = demo.monthHistory.map(m => ({ label: m.label,
+          followers: Math.max(0, Math.round(m.followers * (scaleF || 0))),
+          impressions: Math.max(0, Math.round(m.impressions * (scaleI || 0))) }));
+      }
+      const next = this.state.tutorialDone ? 'app' : 'tour';
+      this.set(Object.assign({ screen: next, tourIndex: 0, tab: 'today', chDay: day, streak: Math.min(7, day) }, demo));
+    }, 3200);
+  };
+  skipChallenge = () => { this.pickChallenge(null); };
+  endTour = () => { this.set({ screen: 'app', tab: 'today', tutorialDone: true }); };
+
+  togglePhase = (key) => {
+    const done = !this.state.checklist[key];
+    const checklist = Object.assign({}, this.state.checklist, { [key]: done });
+    this.set({ checklist: checklist, sheet: null });
+    if (done) {
+      const all = checklist.research && checklist.plan && checklist.create && checklist.post;
+      if (all) this.celebrate('rocket', 'THAT\u2019S A WRAP!', 'all four phases — day ' + this.state.chDay + ' complete', 'rocket');
+      else this.celebrate(this.nextMotif(), key.toUpperCase() + ' DONE!', 'phase complete — keep the film rolling');
+    } else this.sfx('click');
+  };
+
+  publish = () => {
+    const f = this.state.forms;
+    if (!f.url.trim()) { this.toast('Paste the post URL to wrap 🎬'); return; }
+    const posts = this.state.posts.map(p => p.id === (this.state.sheetPost || {}).id ? Object.assign({}, p, { status: 'posted', url: f.url, caption: f.caption, postedAt: new Date().toISOString().slice(0, 10) }) : p);
+    const checklist = Object.assign({}, this.state.checklist, { post: true });
+    this.set({ posts: posts, checklist: checklist, sheet: null, streak: this.state.streak + 1, chDay: Math.min(this.state.chDay + 1, this.state.chTotal) });
+    this.setForm('url', ''); this.setForm('caption', '');
+    this.celebrate('rocket', 'IT\u2019S LIVE!', 'analytics check-ins booked for day 3, 7 & 30', 'rocket');
+  };
+
+  saveAnalytics = () => {
+    const f = this.state.forms, due = this.state.sheetDue;
+    if (!due) return;
+    const entry = { views: +f.views || 0, likes: +f.likes || 0, comments: +f.comments || 0, saves: +f.saves || 0 };
+    const posts = this.state.posts.map(p => p.id === due.postId ? Object.assign({}, p, { analytics: Object.assign({}, p.analytics, { [due.key]: entry }) }) : p);
+    this.set({ posts: posts, sheet: null });
+    ['views', 'likes', 'comments', 'saves'].forEach(k => this.setForm(k, ''));
+    this.celebrate('cowboy', 'NUMBERS LOGGED!', 'the data cowboy rides again', 'shot');
+  };
+
+  saveNote = () => {
+    const f = this.state.forms;
+    if (!f.noteTitle.trim()) { this.toast('Give the note a title ✎'); return; }
+    const notes = [{ id: Date.now(), type: 'note', title: f.noteTitle, date: 'Today', body: f.noteBody }].concat(this.state.notes);
+    this.set({ notes: notes, sheet: null }); this.setForm('noteTitle', ''); this.setForm('noteBody', '');
+    this.sfx('ding'); this.toast('Pinned to the board 📌');
+  };
+  saveInspo = () => {
+    const f = this.state.forms;
+    if (!f.inspoTitle.trim()) { this.toast('Add the clip title ✎'); return; }
+    const inspo = [{ id: Date.now(), platform: 'SAVED', title: f.inspoTitle, hook: f.inspoHook || '—', action: f.inspoAction || '—', idea: f.inspoIdea || '—' }].concat(this.state.inspo);
+    this.set({ inspo: inspo, sheet: null });
+    ['inspoTitle', 'inspoHook', 'inspoAction', 'inspoIdea'].forEach(k => this.setForm(k, ''));
+    this.sfx('ding'); this.toast('Saved to the database 🎞');
+  };
+  savePlan = () => {
+    const f = this.state.forms;
+    if (!f.pfTitle.trim()) { this.toast('Name the post first ✎'); return; }
+    const posts = this.state.posts.concat([{ id: Date.now(), title: f.pfTitle, platform: 'PLANNED', noteRef: f.pfNote || null, filmDate: f.pfFilm || null, postDate: f.pfPost || null, script: f.pfScript || '—', inspo: f.pfInspo || '—', status: 'planned', postedAt: null, url: '', analytics: { d3: null, d7: null, d30: null } }]);
+    this.set({ posts: posts, sheet: null });
+    ['pfTitle', 'pfFilm', 'pfPost', 'pfScript', 'pfInspo', 'pfNote'].forEach(k => this.setForm(k, ''));
+    this.sfx('ding'); this.toast('Added to the slate 🎬');
+  };
+  markStage = (id, stage) => {
+    this.sfx('pick');
+    const posts = this.state.posts.map(p => p.id === id ? Object.assign({}, p, { status: stage }) : p);
+    this.set({ posts: posts });
+  };
+  openPostEdit = (id) => {
+    const p = this.state.posts.find(x => x.id === id);
+    if (!p) return;
+    this.sfx('click');
+    this.setState(s => ({ editPostId: id, sheet: 'postEdit',
+      forms: Object.assign({}, s.forms, { epTitle: p.title || '', epFilm: p.filmDate || '', epPost: p.postDate || '',
+        epScript: p.script === '—' ? '' : (p.script || ''), epInspo: p.inspo === '—' ? '' : (p.inspo || ''),
+        epUrl: p.url || '', epStatus: p.status || 'planned' }) }));
+  };
+  saveEdit = () => {
+    const f = this.state.forms;
+    if (!f.epTitle.trim()) { this.toast('Give it a title ✎'); return; }
+    const posts = this.state.posts.map(p => p.id === this.state.editPostId ? Object.assign({}, p, {
+      title: f.epTitle, filmDate: f.epFilm || null, postDate: f.epPost || null,
+      script: f.epScript || '—', inspo: f.epInspo || '—', url: f.epUrl || p.url, status: f.epStatus }) : p);
+    this.set({ posts: posts, sheet: null, editPostId: null });
+    this.sfx('ding'); this.toast('Changes saved ✓');
+  };
+  resetDemo = () => {
+    try { localStorage.removeItem('clickpublish_v2'); } catch (e) {}
+    this.sfx('whoosh');
+    this.set(this.freshState());
+  };
+
+  // ---------- render ----------
+  renderVals() {
+    const s = this.state, I = this.IMG();
+    const screen = s.screen, sheet = s.sheet;
+    const qs = this.QUESTIONS();
+    const q = qs[Math.min(s.qIndex, qs.length - 1)];
+    const sel = s.answers[q.key];
+    const tilts = ['-1deg', '.8deg', '-.6deg', '1.1deg', '-1.2deg', '.5deg'];
+
+    // due analytics
+    const dueList = [];
+    if (!s.lastFollowerUpdate || this.daysSince(s.lastFollowerUpdate) >= 30) {
+      dueList.push({ window: 'MONTHLY', title: 'Update your followers metric',
+        onOpen: (e) => { e.stopPropagation(); this.sfx('click'); this.set({ tab: 'profile', profOpen: 'metrics' }); } });
+    }
+    s.posts.forEach(p => {
+      if (p.status !== 'posted' || !p.postedAt) return;
+      [[3, 'd3'], [7, 'd7'], [30, 'd30']].forEach(([n, key]) => {
+        if (this.daysSince(p.postedAt) >= n && !p.analytics[key]) {
+          dueList.push({ window: n + '-DAY', title: p.title, key: key, postId: p.id,
+            onOpen: (e) => { e.stopPropagation(); this.sfx('click'); this.set({ sheet: 'analytics', sheetDue: { postId: p.id, key: key, window: n + '-day', title: p.title } }); } });
+        }
+      });
+    });
+    const firstDue = dueList.length ? dueList[0] : null;
+
+    // phases
+    const phaseDefs = [
+      ['research', 'RESEARCH', 'Dig into what\'s working', '🔍'],
+      ['plan', 'PLAN', 'Outline your content', '🗓'],
+      ['create', 'CREATE', 'Film it. Edit it. Done.', '🎬'],
+      ['post', 'POST', 'Share it with the world', '🚀']
+    ];
+    const phaseDetails = {
+      research: ['Find inspiration, brain dump, and put ideas to page', 'OPEN RESEARCH ▸', () => this.set({ tab: 'research', phaseOpen: null })],
+      plan: ['Lock the slate — filming date, posting date, script and inspo clip for your next post.', 'OPEN THE SLATE ▸', () => this.set({ tab: 'plan', phaseOpen: null })],
+      create: ['Film and edit what\u2019s slated for today, then check it off the call sheet.', 'VIEW CALL SHEET ▸', () => this.set({ sheet: 'create', sheetPost: s.posts.find(p => p.status === 'edited') || s.posts.find(p => p.status === 'filmed') || s.posts[0] || null })],
+      post: ['Set up the post, write the caption, publish and paste the URL back here.', 'SET UP THE POST ▸', () => this.set({ sheet: 'post', sheetPost: s.posts.find(p => p.status === 'edited') || s.posts.find(p => p.status === 'filmed') || s.posts[0] || null })]
+    };
+    const phases = phaseDefs.map(([key, label, sub, emoji], i) => {
+      const done = !!s.checklist[key];
+      const open = s.phaseOpen === key;
+      return { key: key, label: label, sub: sub, emoji: emoji, done: done, open: open,
+        caret: open ? '▴' : '▾',
+        detail: phaseDetails[key][0], actionLabel: phaseDetails[key][1],
+        onAction: (e) => { e.stopPropagation(); phaseDetails[key][2](); },
+        toggleLabel: done ? 'UNDO ↺' : 'MARK DONE ✓',
+        bg: done ? '#DCE9DA' : '#FDFAF1', tilt: tilts[i % tilts.length],
+        check: done ? '✓' : '', checkBg: done ? '#3E7A4E' : '#FDFAF1', strike: done ? 'line-through' : 'none',
+        onToggle: (e) => { e.stopPropagation(); this.togglePhase(key); },
+        onOpen: () => { this.set({ phaseOpen: open ? null : key }); } };
+    });
+
+    const readyPost = s.posts.find(p => p.status === 'edited') || s.posts.find(p => p.status === 'filmed');
+    const createTasks = s.posts.filter(p => p.status === 'planned' || p.status === 'filmed' || p.status === 'edited').slice(0, 3).map(p => ({
+      title: p.title, meta: '🎬 ' + this.fmtDate(p.filmDate) + '  ·  🚀 ' + this.fmtDate(p.postDate),
+      filmedBg: (p.status === 'filmed' || p.status === 'edited') ? '#3E7A4E' : 'rgba(32,29,26,.08)',
+      filmedFg: (p.status === 'filmed' || p.status === 'edited') ? '#FDF6DC' : '#201D1A',
+      editedBg: p.status === 'edited' ? '#3E7A4E' : 'rgba(32,29,26,.08)',
+      editedFg: p.status === 'edited' ? '#FDF6DC' : '#201D1A',
+      onFilmed: () => this.markStage(p.id, 'filmed'),
+      onEdited: () => this.markStage(p.id, 'edited')
+    }));
+
+    const statusMap = { planned: ['PLANNED', '#8A6E4B'], filmed: ['FILMED 🎬', '#35608F'], edited: ['EDITED ✂️', '#B0731F'], posted: ['POSTED 🚀', '#3E7A4E'] };
+
+    // calendar
+    const isoOf = (dt) => { const p = (n) => String(n).padStart(2, '0'); return dt.getFullYear() + '-' + p(dt.getMonth() + 1) + '-' + p(dt.getDate()); };
+    const todayD = new Date(); const todayIso = isoOf(todayD);
+    const calView = new Date(todayD.getFullYear(), todayD.getMonth() + (s.calOff || 0), 1, 12);
+    const calSel = s.calSel || todayIso;
+    const dim = new Date(calView.getFullYear(), calView.getMonth() + 1, 0).getDate();
+    const firstDow = new Date(calView.getFullYear(), calView.getMonth(), 1).getDay();
+    const calCells = [];
+    for (let b = 0; b < firstDow; b++) calCells.push({ day: '', dots: '', bg: 'transparent', fg: 'transparent', border: 'none', onTap: () => {} });
+    for (let dnum = 1; dnum <= dim; dnum++) {
+      const iso = isoOf(new Date(calView.getFullYear(), calView.getMonth(), dnum, 12));
+      const hasFilm = s.posts.some(p => p.filmDate === iso);
+      const hasPost = s.posts.some(p => p.postDate === iso);
+      const isSel = iso === calSel; const isToday = iso === todayIso;
+      calCells.push({ day: String(dnum),
+        dots: (hasFilm ? '🎬' : '') + (hasPost ? '🚀' : ''),
+        bg: isSel ? '#35608F' : (hasFilm || hasPost ? '#F3EDE1' : 'transparent'),
+        fg: isSel ? '#FDF6DC' : '#201D1A',
+        border: isToday ? '2px solid #E0532F' : '2px solid transparent',
+        onTap: () => { this.sfx('click'); this.set({ calSel: iso }); } });
+    }
+    const selItems = [];
+    s.posts.forEach(p => {
+      if (p.filmDate === calSel) selItems.push({ emoji: '🎬', kind: 'CREATE', title: p.title, platform: p.platform, status: statusMap[p.status][0], statusColor: statusMap[p.status][1], onOpen: () => this.openPostEdit(p.id) });
+      if (p.postDate === calSel) selItems.push({ emoji: '🚀', kind: 'POST', title: p.title, platform: p.platform, status: statusMap[p.status][0], statusColor: statusMap[p.status][1], onOpen: () => this.openPostEdit(p.id) });
+    });
+
+    // risk radar
+    const riskWin = s.riskWindow || 7;
+    const cadD = s.answers.cadDays || 3, cadP = s.answers.cadPosts || 1;
+    const riskNeeded = Math.max(1, Math.ceil(cadD * cadP * riskWin / 7));
+    const dayDiff = (iso) => Math.floor((new Date(iso + 'T12:00:00') - new Date(todayIso + 'T12:00:00')) / 86400000);
+    const inWindow = s.posts.filter(p => p.postDate && dayDiff(p.postDate) >= 0 && dayDiff(p.postDate) < riskWin && p.status !== 'posted');
+    const riskPlanned = inWindow.length;
+    const riskFlags = [];
+    if (riskPlanned < riskNeeded) {
+      const gap = riskNeeded - riskPlanned;
+      riskFlags.push({ icon: '📉', text: 'You\u2019re ' + gap + ' post' + (gap > 1 ? 's' : '') + ' short of your ' + cadD + '×/week cadence for the next ' + riskWin + ' days.' });
+    }
+    const unfilmed = inWindow.filter(p => p.status === 'planned' && p.filmDate && dayDiff(p.filmDate) < 0);
+    if (unfilmed.length) riskFlags.push({ icon: '🎬', text: unfilmed.length + ' slated post' + (unfilmed.length > 1 ? 's' : '') + ' missed the filming date — reschedule or shoot today: ' + unfilmed.map(p => '\u201c' + p.title + '\u201d').join(', ') + '.' });
+    if (s.challenge && (s.chTotal - s.chDay) <= riskWin && riskPlanned < (s.chTotal - s.chDay)) {
+      riskFlags.push({ icon: '🏆', text: 'The ' + s.challenge.title + ' ends in ' + (s.chTotal - s.chDay) + ' days — your slate doesn\u2019t cover the finish.' });
+    }
+    const attention = (p) => {
+      if (p.status === 'posted') return 1e9 - (p.postDate ? dayDiff(p.postDate) : 0);
+      let score = p.postDate ? Math.max(0, dayDiff(p.postDate)) * 10 + 100 : 5000;
+      if (p.postDate && dayDiff(p.postDate) < 0) score -= 3000;
+      if (p.status === 'planned' && p.filmDate && dayDiff(p.filmDate) < 0) score -= 1500;
+      return score;
+    };
+    const planList = s.posts.slice()
+      .filter(p => !s.hidePosted || p.status !== 'posted')
+      .sort((a, b) => attention(a) - attention(b))
+      .map((p, i) => {
+        const missedFilm = p.status === 'planned' && p.filmDate && dayDiff(p.filmDate) < 0;
+        const missedPost = p.status !== 'posted' && p.postDate && dayDiff(p.postDate) < 0;
+        return {
+          title: p.title, platform: p.platform, script: p.script, inspo: p.inspo,
+          filmDate: this.fmtDate(p.filmDate), postDate: this.fmtDate(p.postDate),
+          status: statusMap[p.status][0], statusColor: statusMap[p.status][1],
+          hasNote: !!p.noteRef, noteRef: p.noteRef || '',
+          onOpen: () => this.openPostEdit(p.id),
+          flagged: missedFilm || missedPost,
+          flagText: missedPost ? 'Posting date passed — publish it or replan.' : 'Missed the filming date — reschedule or shoot today.',
+          bg: p.status === 'posted' ? '#DCE9DA' : '#FDFAF1', tilt: tilts[i % tilts.length]
+        };
+      });
+
+    const rq = (s.researchQ || '').trim().toLowerCase();
+    const mh = (s.monthHistory && s.monthHistory.length) ? s.monthHistory : this.demoData().monthHistory;
+    const chartRange = s.chartRange || 6;
+    const chartMetric = s.chartMetric || 'followers';
+    const shownMonths = mh.slice(-chartRange);
+    const chartMax = Math.max(1, ...shownMonths.map(m => m[chartMetric] || 0));
+
+    const chDef = s.challenge || { title: 'MY POSTING GOAL', total: 30 };
+    const pct = Math.min(100, Math.round((s.chDay / (s.chTotal || 30)) * 100)) + '%';
+
+    // scoreboard + best performers
+    const fGoal = this.parseGoal(s.answers.followerGoal, 10000);
+    const iGoal = this.parseGoal(s.answers.impressionGoal, 100000);
+    const met = s.metrics || { followers: 0, monthImpressions: 0 };
+    const best = s.posts
+      .filter(p => p.status === 'posted' && p.postedAt && this.daysSince(p.postedAt) <= 92)
+      .map(p => {
+        const a = p.analytics || {};
+        const v = Math.max((a.d3 && a.d3.views) || 0, (a.d7 && a.d7.views) || 0, (a.d30 && a.d30.views) || 0);
+        const l = Math.max((a.d3 && a.d3.likes) || 0, (a.d7 && a.d7.likes) || 0, (a.d30 && a.d30.likes) || 0);
+        return { p: p, v: v, l: l };
+      })
+      .filter(x => x.v > 0).sort((a, b) => b.v - a.v).slice(0, 3);
+
+    const tabDefs = [['today', 'TODAY', '🎬'], ['research', 'RESEARCH', '🔍'], ['plan', 'PLAN', '🗓'], ['community', 'THE LOT', '🏆'], ['profile', 'YOU', '⭐']];
+    const tabs = tabDefs.map(([key, label, icon], i) => ({
+      label: label, icon: icon, tilt: s.tab === key ? '-6deg' : '0deg',
+      color: s.tab === key ? '#E0532F' : 'rgba(32,29,26,.45)',
+      filter: s.tab === key ? 'none' : 'grayscale(1) opacity(.55)',
+      onTap: () => { this.sfx('click'); this.set({ tab: key }); }
+    }));
+
+    const platforms = s.answers.platforms || ['Instagram', 'TikTok'];
+    const name = s.authName || 'Rae Delgado';
+    const slug = name.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    const initials = name.trim().split(/\s+/).map(w => w[0]).join('').slice(0, 2).toUpperCase();
+
+    const trans = s.trans;
+    const celeb = s.celeb;
+    const f = s.forms;
+
+    return {
+      // routing
+      isSplash: screen === 'splash', isAuth: screen === 'auth', isQuiz: screen === 'quiz' && !trans,
+      isPick: screen === 'pick', isLaunch: screen === 'launch', isTour: screen === 'tour', inApp: screen === 'app',
+      authTitle: s.authName.trim() ? s.authName.trim().toUpperCase() : 'CAST YOURSELF',
+      tToday: s.tab === 'today', tResearch: s.tab === 'research', tPlan: s.tab === 'plan',
+      tCommunity: s.tab === 'community', tProfile: s.tab === 'profile',
+      startApp: this.startApp, stopProp: (e) => e.stopPropagation(),
+      three: 3, four: 4,
+
+      // auth
+      authName: s.authName, authEmail: s.authEmail, authPass: s.authPass,
+      onAuthName: (e) => this.set({ authName: e.target.value }),
+      onAuthEmail: (e) => this.set({ authEmail: e.target.value }),
+      onAuthPass: (e) => this.set({ authPass: e.target.value }),
+      onCreateAccount: this.createAccount,
+      authBtnBg: s.authName.trim() ? '#E0532F' : '#B8A98E',
+
+      // quiz
+      qNum: s.qIndex + 1, qTotal: qs.length, qKey: 'q' + s.qIndex,
+      qPct: Math.round(((s.qIndex) / qs.length) * 100) + '%',
+      qKicker: q.kicker, qTitle: q.title, qSub: q.sub,
+      qIsNiche: q.type === 'niche', qIsTargets: q.type === 'targets', qIsCadence: q.type === 'cadence', qIsBaseline: q.type === 'baseline', qIsOptions: !q.type,
+      bFollowers: s.answers.curFollowers || '', onBFollowers: (e) => this.setAnswer('curFollowers', e.target.value.replace(/[^0-9]/g, '')),
+      bImpressions: s.answers.curImpressions || '', onBImpressions: (e) => this.setAnswer('curImpressions', e.target.value.replace(/[^0-9]/g, '')),
+      qShowNext: (!!q.multi && (sel || []).length > 0)
+        || (q.type === 'niche' && (s.answers.niches || []).length > 0)
+        || (q.type === 'cadence') || (q.type === 'baseline')
+        || (q.type === 'targets' && !!(s.answers.followerGoal || '').trim() && !!(s.answers.impressionGoal || '').trim()),
+      qNext: this.advanceQuiz,
+      cadDays: s.answers.cadDays || 3, cadPosts: s.answers.cadPosts || 1,
+      cadSummary: (s.answers.cadDays || 3) + ' days a week · ' + (s.answers.cadPosts || 1) + ' post' + ((s.answers.cadPosts || 1) > 1 ? 's' : '') + ' a day',
+      onCadDaysMinus: () => this.setAnswer('cadDays', Math.max(1, (s.answers.cadDays || 3) - 1)),
+      onCadDaysPlus: () => this.setAnswer('cadDays', Math.min(7, (s.answers.cadDays || 3) + 1)),
+      onCadPostsMinus: () => this.setAnswer('cadPosts', Math.max(1, (s.answers.cadPosts || 1) - 1)),
+      onCadPostsPlus: () => this.setAnswer('cadPosts', Math.min(5, (s.answers.cadPosts || 1) + 1)),
+      tFollowers: s.answers.followerGoal || '', onTFollowers: (e) => this.setAnswer('followerGoal', e.target.value.replace(/[^0-9]/g, '')),
+      tImpressions: s.answers.impressionGoal || '', onTImpressions: (e) => this.setAnswer('impressionGoal', e.target.value.replace(/[^0-9]/g, '')),
+      nicheCats: this.NICHES().map(([emoji, name, niches], ci) => ({
+        emoji: emoji, name: name.toUpperCase(), count: niches.length + ' LANES',
+        open: s.nicheOpen === ci, caret: s.nicheOpen === ci ? '▴' : '▾',
+        tilt: tilts[ci % tilts.length],
+        onToggle: () => this.set({ nicheOpen: s.nicheOpen === ci ? null : ci }),
+        niches: niches.map(label => ({ label: label,
+          bg: (s.answers.niches || []).includes(label) ? '#FAE78C' : '#FDFAF1',
+          onPick: () => {
+            const cur = this.state.answers.niches || [];
+            this.setAnswer('niches', cur.includes(label) ? cur.filter(x => x !== label) : cur.concat([label]));
+          } }))
+      })),
+      qOptions: (q.opts || []).map(([emoji, label], i) => {
+        const picked = q.multi ? (sel || []).includes(label) : sel === label;
+        return { emoji: emoji, label: label, mark: picked ? '★ CAST' : '',
+          bg: picked ? '#FAE78C' : '#F3EDE1', tilt: tilts[i % tilts.length],
+          onPick: () => this.pickOption(q, label) };
+      }),
+
+      // quiz diorama parallax (connected paper world)
+      sunX: (-(s.qIndex * 12)) + 'px',
+      cloudFarX: (-(s.qIndex * 30)) + 'px',
+      cloudNearX: (-(s.qIndex * 52)) + 'px',
+      palmX: (-(s.qIndex * 55)) + 'px',
+      hillsX: (-(s.qIndex * 38)) + 'px',
+      planeEl: screen === 'quiz' ? React.createElement('img', { key: 'plane' + s.qIndex, src: I.planeCut, alt: '', style: { position: 'absolute', top: '150px', left: '50%', width: '110px', marginLeft: '-55px', zIndex: 1, animation: 'cpPlane 1.5s steps(14) both', pointerEvents: 'none', filter: 'drop-shadow(0 8px 8px rgba(32,29,26,.28))' } }) : null,
+
+      // pick
+      pickList: this.CHALLENGES().map((ch, i) => Object.assign({}, ch, { tilt: tilts[i % tilts.length], onPick: () => this.pickChallenge(ch) })),
+      onSkipChallenge: this.skipChallenge,
+
+      // tour
+      tourKey: 'tour' + (s.tourIndex || 0),
+      tourEmoji: this.TOUR()[(s.tourIndex || 0) % 5].emoji,
+      tourTitle: this.TOUR()[(s.tourIndex || 0) % 5].title,
+      tourText: this.TOUR()[(s.tourIndex || 0) % 5].text,
+      tourImgEl: screen === 'tour' ? React.createElement('img', { key: 'tourimg' + (s.tourIndex || 0), src: this.TOUR()[(s.tourIndex || 0) % 5].img, alt: '', style: { width: '170px', animation: 'cpPop .5s steps(5) both, cpFloat 4s ease-in-out .5s infinite', filter: 'drop-shadow(0 10px 12px rgba(32,29,26,.35))' } }) : null,
+      tourDots: this.TOUR().map((t, i) => ({ bg: i === (s.tourIndex || 0) ? '#E0532F' : 'rgba(32,29,26,.2)' })),
+      tourNextLabel: (s.tourIndex || 0) >= 4 ? 'Lights, camera, ACTION ▸' : 'NEXT ▸',
+      tourNext: () => { if ((s.tourIndex || 0) >= 4) this.endTour(); else this.set({ tourIndex: (s.tourIndex || 0) + 1 }); },
+      tourSkip: this.endTour,
+
+      // today
+      greeting: 'morning, ' + name.split(' ')[0].toLowerCase(),
+      todayLabel: new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }).toUpperCase(),
+      streak: s.streak, chName: chDef.title, chDay: s.chDay, chTotal: s.chTotal, chPct: pct,
+      goCommunity: () => { this.sfx('click'); this.set({ tab: 'community' }); },
+      goProfile: (e) => { if (e) e.preventDefault(); this.sfx('click'); this.set({ tab: 'profile' }); },
+      phases: phases, hasDue: dueList.length > 0, dueList: dueList, tabs: tabs,
+      sbFollowers: this.fmt(met.followers), sbFollowerGoal: this.fmt(fGoal),
+      sbFollowerPct: Math.min(100, Math.round((met.followers / fGoal) * 100)) + '%',
+      sbImpr: this.fmt(met.monthImpressions), sbImprGoal: this.fmt(iGoal),
+      sbImprPct: Math.min(100, Math.round((met.monthImpressions / iGoal) * 100)) + '%',
+      chartRangeOpts: [3, 6, 9, 12].map(n => ({ label: n + 'M',
+        bg: chartRange === n ? '#201D1A' : '#F3EDE1', fg: chartRange === n ? '#FAE78C' : '#201D1A',
+        onPick: () => { this.sfx('click'); this.set({ chartRange: n }); } })),
+      chartMetricOpts: [['followers', '👥 FOLLOWERS'], ['impressions', '👁 IMPRESSIONS']].map(([key, label]) => ({ label: label,
+        bg: chartMetric === key ? (key === 'followers' ? '#35608F' : '#E0532F') : '#F3EDE1', fg: chartMetric === key ? '#FDF6DC' : '#201D1A',
+        onPick: () => { this.sfx('click'); this.set({ chartMetric: key }); } })),
+      chartBars: shownMonths.map(m => {
+        const v = m[chartMetric] || 0;
+        return { label: m.label, val: this.fmtK(v), h: Math.max(4, Math.round((v / chartMax) * 100)) + '%',
+          color: chartMetric === 'followers' ? '#35608F' : '#E0532F' };
+      }),
+      mFollowersNow: String(met.followers || ''),
+      onMFollowersNow: (e) => { const v = parseInt(e.target.value.replace(/[^0-9]/g, ''), 10) || 0; this.set({ metrics: Object.assign({}, this.state.metrics, { followers: v }), lastFollowerUpdate: todayIso }); },
+      hpLabel: s.hidePosted ? 'SHOW POSTED' : 'HIDE POSTED',
+      hpBg: s.hidePosted ? '#35608F' : '#F3EDE1', hpFg: s.hidePosted ? '#FDF6DC' : '#8A6E4B',
+      onHidePosted: () => { this.sfx('click'); this.set({ hidePosted: !s.hidePosted }); },
+      hasBest: best.length > 0,
+      bestList: best.map((x, i) => ({ rank: '#' + (i + 1), title: x.p.title, platform: x.p.platform,
+        views: this.fmt(x.v), likes: this.fmt(x.l), tilt: tilts[i % tilts.length],
+        onOpen: () => this.openPostEdit(x.p.id) })),
+      onToggleTasks: () => { this.sfx('click'); this.set({ tasksOpen: !s.tasksOpen }); },
+      tasksShown: s.tasksOpen !== false, tasksHidden: s.tasksOpen === false,
+      tasksCaret: s.tasksOpen === false ? '▸ SHOW' : '▾ HIDE',
+      tasksSummary: Object.values(s.checklist).filter(Boolean).length + ' of 4 phases done today',
+
+      // research
+      researchQ: s.researchQ || '', onResearchQ: (e) => this.set({ researchQ: e.target.value }),
+      inspoList: s.inspo.filter(v => !rq || [v.title, v.hook, v.action, v.idea, v.platform].join(' ').toLowerCase().includes(rq)).map((v, i) => Object.assign({}, v, { tilt: tilts[i % tilts.length], idea: v.idea })),
+      notesList: s.notes.filter(n => !rq || (n.title + ' ' + n.body).toLowerCase().includes(rq)).map((n, i) => ({ icon: n.type === 'voice' ? '🎙' : '📝', title: n.title, date: n.date, body: n.body, tilt: tilts[(i + 1) % tilts.length] })),
+      openInspoForm: () => { this.sfx('click'); this.set({ sheet: 'inspoForm' }); },
+      openNoteForm: () => { this.sfx('click'); this.set({ sheet: 'noteForm' }); },
+
+      // plan — calendar
+      calTitle: calView.toLocaleDateString('en-US', { month: 'long', year: 'numeric' }).toUpperCase(),
+      calPrev: () => { this.sfx('click'); this.set({ calOff: (s.calOff || 0) - 1 }); },
+      calNext: () => { this.sfx('click'); this.set({ calOff: (s.calOff || 0) + 1 }); },
+      calDow: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+      calCells: calCells,
+      selLabel: new Date(calSel + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' }).toUpperCase() + (calSel === todayIso ? ' · TODAY' : ''),
+      selItems: selItems, selHasItems: selItems.length > 0, selEmpty: selItems.length === 0,
+
+      // plan — risk radar
+      riskWin: riskWin,
+      onRiskMinus: () => this.set({ riskWindow: Math.max(1, riskWin - 1) }),
+      onRiskPlus: () => this.set({ riskWindow: Math.min(30, riskWin + 1) }),
+      riskPlanned: riskPlanned, riskNeeded: riskNeeded,
+      riskPct: Math.min(100, Math.round((riskPlanned / Math.max(1, riskNeeded)) * 100)) + '%',
+      riskBg: riskFlags.length ? '#FAE78C' : '#DCE9DA',
+      riskEmoji: riskFlags.length ? '🚨' : '🛡',
+      riskVerdict: riskFlags.length ? 'needs attention' : 'looking good',
+      riskBarColor: riskFlags.length ? '#E0532F' : '#3E7A4E',
+      riskFlags: riskFlags, hasRiskFlags: riskFlags.length > 0, riskAllClear: riskFlags.length === 0,
+
+      planList: planList,
+      openPlanForm: () => { this.sfx('click'); this.set({ sheet: 'planForm' }); },
+
+      // community
+      commChallenges: this.CHALLENGES().map((ch, i) => Object.assign({}, ch, {
+        tilt: tilts[i % tilts.length],
+        cta: (s.challenge && s.challenge.id === ch.id) ? '✓ ENROLLED' : 'JOIN →',
+        onJoin: () => { this.sfx('pick'); this.set({ challenge: ch, chTotal: ch.total }); this.toast('Enrolled in ' + ch.title + ' 🏆'); }
+      })),
+      bulletins: s.bulletins.map((b, i) => Object.assign({}, b, { tilt: tilts[i % tilts.length] })),
+      leaders: s.leaders.map((l, i) => ({
+        rank: '#' + (i + 1), name: l.name, detail: l.detail, score: l.score,
+        initials: l.name.split(/\s+/).map(w => w[0]).join('').slice(0, 2).toUpperCase(),
+        bg: l.me ? '#FAE78C' : '#FDFAF1', tilt: l.me ? '-1deg' : '0deg'
+      })),
+      onInvite: () => { this.sfx('click'); this.set({ sheet: 'invite' }); },
+      onCopyInvite: () => { this.sfx('ding'); this.set({ invited: true }); this.toast('Invite link copied 💌'); },
+      inviteBtnLabel: s.invited ? '✓ COPIED — SEND IT!' : 'COPY INVITE LINK',
+
+      // profile
+      profName: name, profInitials: initials, profSlug: slug,
+      profGoal: ((s.answers.niches || [])[0] || 'multi-hyphenate creator').toLowerCase(),
+      profPlatforms: platforms,
+      profFreq: (s.answers.cadDays || 3) + ' days/wk · ' + (s.answers.cadPosts || 1) + '/day',
+      profBrand: s.answers.brand || 'Personal brand',
+      profNiche: (s.answers.niches || []).length ? (s.answers.niches.slice(0, 2).join(', ') + ((s.answers.niches.length > 2) ? ' +' + (s.answers.niches.length - 2) : '')) : 'Filmmaking',
+      profFollowGoal: this.fmt(fGoal),
+      profImprGoal: this.fmt(iGoal),
+      sec: ['personal', 'metrics', 'celebrations', 'challenges', 'help', 'download', 'deactivate', 'services'].reduce((acc, key) => {
+        const open = s.profOpen === key;
+        acc[key] = { open: open, caret: open ? '▴' : '▾', onTap: () => { this.sfx('click'); this.set({ profOpen: open ? null : key, deacArmed: false }); } };
+        return acc;
+      }, {}),
+      hasAvatarImg: !!s.avatarData,
+      avatarBg: s.avatarData ? ('url("' + s.avatarData + '")') : 'none',
+      hasAvatarSprite: !s.avatarData && s.avatar != null,
+      noAvatar: !s.avatarData && s.avatar == null,
+      avPos: s.avatar != null ? ((s.avatar % 4) * 100 / 3) + '% ' + (Math.floor(s.avatar / 4) * 100 / 4) + '%' : '0% 0%',
+      avatarOpts: Array.from({ length: 20 }, (_, i) => ({
+        pos: ((i % 4) * 100 / 3) + '% ' + (Math.floor(i / 4) * 100 / 4) + '%',
+        border: s.avatar === i && !s.avatarData ? '3px solid #E0532F' : '3px solid transparent',
+        onPick: () => { this.sfx('click'); this.set({ avatar: i, avatarData: null }); } })),
+      onAvatarUpload: (e) => {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = () => {
+          const img = new Image();
+          img.onload = () => {
+            const c = document.createElement('canvas'); const size = 128;
+            c.width = size; c.height = size;
+            const ctx = c.getContext('2d');
+            const m = Math.min(img.width, img.height);
+            ctx.drawImage(img, (img.width - m) / 2, (img.height - m) / 2, m, m, 0, 0, size, size);
+            this.set({ avatarData: c.toDataURL('image/jpeg', .82), avatar: null });
+            this.toast('Headshot updated 📷');
+          };
+          img.src = reader.result;
+        };
+        reader.readAsDataURL(file);
+      },
+      onEditName: (e) => this.set({ authName: e.target.value }),
+      onEditEmail: (e) => this.set({ authEmail: e.target.value }),
+      onEditBrand: (e) => this.setAnswer('brand', e.target.value),
+      profPlatformOpts: ['Instagram', 'TikTok', 'YouTube', 'X / Threads', 'Pinterest', 'LinkedIn'].map(label => {
+        const on = platforms.includes(label);
+        return { label: label, bg: on ? '#35608F' : '#F3EDE1', fg: on ? '#FDF6DC' : '#201D1A',
+          onPick: () => this.setAnswer('platforms', on ? platforms.filter(x => x !== label) : platforms.concat([label])) };
+      }),
+      profChallengeOpts: this.CHALLENGES().filter(ch => !s.challenge || ch.id !== s.challenge.id)
+        .concat(s.challenge ? [{ id: 'own', emoji: '🧭', title: 'MY OWN POSTING GOAL', total: 30 }] : [])
+        .map(ch => ({ emoji: ch.emoji, title: ch.title,
+          onPick: () => { this.sfx('click'); const chal = ch.id === 'own' ? null : ch; this.set({ challenge: chal, chTotal: ch.total, chDay: Math.min(s.chDay, ch.total) }); this.toast(ch.id === 'own' ? 'Riding your own goal 🧭' : 'You\u2019re in — ' + ch.title + ' 🏆'); } })),
+      onReplayTour: () => this.set({ screen: 'tour', tourIndex: 0 }),
+      onHelpContact: () => this.toast('Support ticket opened — we\u2019ll email you ✓'),
+      onServices: () => this.toast('Request sent — the Clear Sky team will reach out 🎬'),
+      downloadHint: (s.posts || []).length + ' posts ready to export.',
+      onDownloadData: () => { this.exportCSV(); },
+      deacLabel: s.deacArmed ? 'TAP AGAIN TO CONFIRM' : 'DEACTIVATE MY ACCOUNT',
+      deacBg: s.deacArmed ? '#B3402A' : 'transparent', deacFg: s.deacArmed ? '#FDF6DC' : '#B3402A',
+      onDeactivate: () => { if (s.deacArmed) { this.toast('Account deactivated. Fade to black. 🎬'); this.resetDemo(); } else { this.set({ deacArmed: true }); } },
+      celebCast: [['surprise', '🎲', 'SURPRISE ME'], ['memes', '🍿', 'MEMES'], ['rocket', '🚀', 'ROCKET'], ['cowboy', '🤠', 'COWBOY'], ['lovers', '💋', 'LOVERS'], ['jump', '🎞', 'LEAP'], ['sunrise', '🌅', 'SUNRISE'], ['paparazzi', '📸', 'PAPARAZZI'], ['headliner', '🎧', 'HEADLINER'], ['plane', '✈️', 'FLYBY'], ['car', '🚗', 'JOYRIDE']].map(([key, emoji, label], i) => ({
+        key: key, emoji: emoji, label: label,
+        bg: (s.celebStyle || 'surprise') === key ? '#FAE78C' : 'rgba(32,29,26,.06)',
+        tilt: tilts[i % tilts.length],
+        onPick: () => { this.set({ celebStyle: key }, () => { if (key === 'surprise') this.toast('Surprise mode — we\u2019ll rotate the whole cast 🎲'); else if (key === 'memes') this.celebrate('memes', 'MEME MODE ON!', 'the internet joins your victory lap'); else this.celebrate(key, 'CAST LOCKED!', 'this is your new victory scene'); }); }
+      })),
+      onResetDemo: this.resetDemo,
+
+      // sheet
+      sheetOn: !!sheet,
+      closeSheet: () => { this.sfx('click'); this.set({ sheet: null }); },
+      shResearch: sheet === 'research', shPlan: sheet === 'plan', shCreate: sheet === 'create', shPost: sheet === 'post',
+      shAnalytics: sheet === 'analytics', shNote: sheet === 'noteForm', shInspo: sheet === 'inspoForm',
+      shPlanForm: sheet === 'planForm', shPostEdit: sheet === 'postEdit', shInvite: sheet === 'invite',
+      epTitle: f.epTitle, onEpTitle: this.field('epTitle'),
+      epFilm: f.epFilm, onEpFilm: this.field('epFilm'),
+      epPost: f.epPost, onEpPost: this.field('epPost'),
+      epScript: f.epScript, onEpScript: this.field('epScript'),
+      epInspo: f.epInspo, onEpInspo: this.field('epInspo'),
+      epUrl: f.epUrl, onEpUrl: this.field('epUrl'),
+      epIsPosted: f.epStatus === 'posted',
+      epStatusOpts: [['planned', 'PLANNED'], ['filmed', 'FILMED 🎬'], ['edited', 'EDITED ✂️'], ['posted', 'POSTED 🚀']].map(([key, label]) => ({
+        label: label, bg: f.epStatus === key ? '#201D1A' : '#F3EDE1', fg: f.epStatus === key ? '#FAE78C' : '#201D1A',
+        onPick: () => this.setForm('epStatus', key) })),
+      epAnalytics: (() => {
+        const p = s.posts.find(x => x.id === s.editPostId) || {};
+        const a = p.analytics || {};
+        return [['3-DAY', a.d3], ['7-DAY', a.d7], ['30-DAY', a.d30]].map(([label, e]) => ({ label: label, val: e ? this.fmtK(parseInt(String(e.views || '0').replace(/[^0-9]/g, ''), 10) || 0) + ' views' : '—' }));
+      })(),
+      onSaveEdit: this.saveEdit,
+      sheetEmoji: ({ research: '🔍', plan: '🗓', create: '🎬', post: '🚀', analytics: '📊', noteForm: '📝', inspoForm: '🎞', planForm: '🗓', postEdit: '✎', invite: '💌' })[sheet] || '✦',
+      sheetTitle: ({ research: 'RESEARCH', plan: 'PLAN', create: 'CREATE', post: 'POST', analytics: 'ANALYTICS CHECK-IN', noteForm: 'NEW NOTE', inspoForm: 'NEW INSPO CLIP', planForm: 'PLAN A POST', postEdit: 'EDIT POST', invite: 'INVITE A FRIEND' })[sheet] || '',
+      sheetKicker: ({ research: 'phase one', plan: 'phase two', create: 'phase three', post: 'phase four', analytics: 'the numbers don\u2019t lie', postEdit: 'the slate', noteForm: 'research room', inspoForm: 'research room', planForm: 'the slate', invite: 'the lot' })[sheet] || '',
+      goResearchFromSheet: () => { this.set({ sheet: null, tab: 'research' }); this.sfx('click'); },
+      goPlanFromSheet: () => { this.set({ sheet: null, tab: 'plan' }); this.sfx('click'); },
+      sheetComplete: () => { const map = { research: 'research', plan: 'plan', create: 'create' }; const k = map[sheet]; if (k && !s.checklist[k]) this.togglePhase(k); else this.set({ sheet: null }); },
+      createTasks: createTasks,
+
+      // post sheet
+      postTitle: (s.sheetPost || readyPost || { title: 'today\u2019s edit' }).title,
+      postCaption: f.caption, onPostCaption: this.field('caption'),
+      postUrl: f.url, onPostUrl: this.field('url'),
+      publishBg: f.url.trim() ? '#E0532F' : '#B8A98E',
+      onPublish: this.publish,
+
+      // analytics sheet
+      anaTitle: (s.sheetDue || firstDue || { title: '' }).title,
+      anaWindow: (s.sheetDue || { window: '3-day' }).window,
+      anaViews: f.views, onAnaViews: this.field('views'),
+      anaLikes: f.likes, onAnaLikes: this.field('likes'),
+      anaComments: f.comments, onAnaComments: this.field('comments'),
+      anaSaves: f.saves, onAnaSaves: this.field('saves'),
+      onSaveAnalytics: this.saveAnalytics,
+
+      // note/inspo/plan forms
+      noteTitle: f.noteTitle, onNoteTitle: this.field('noteTitle'),
+      noteBody: f.noteBody, onNoteBody: this.field('noteBody'),
+      onSaveNote: this.saveNote,
+      inspoTitle: f.inspoTitle, onInspoTitle: this.field('inspoTitle'),
+      inspoHook: f.inspoHook, onInspoHook: this.field('inspoHook'),
+      inspoAction: f.inspoAction, onInspoAction: this.field('inspoAction'),
+      inspoIdea: f.inspoIdea, onInspoIdea: this.field('inspoIdea'),
+      onSaveInspo: this.saveInspo,
+      pfTitle: f.pfTitle, onPfTitle: this.field('pfTitle'),
+      pfFilm: f.pfFilm, onPfFilm: this.field('pfFilm'),
+      pfPost: f.pfPost, onPfPost: this.field('pfPost'),
+      pfScript: f.pfScript, onPfScript: this.field('pfScript'),
+      pfInspo: f.pfInspo, onPfInspo: this.field('pfInspo'),
+      pfNoteOpts: s.notes.slice(0, 6).map(n => {
+        const sel = f.pfNote === n.title;
+        return { label: (n.type === 'voice' ? '🎙 ' : '📝 ') + n.title, bg: sel ? '#35608F' : '#F3EDE1', fg: sel ? '#FDF6DC' : '#201D1A',
+          onPick: () => this.setForm('pfNote', sel ? '' : n.title) };
+      }),
+      onSavePlan: this.savePlan,
+
+      // celebration
+      celebOn: !!celeb,
+      celebBg: I.sky,
+      celebImgTop: celeb ? celeb.motif.top : '30%',
+      celebImgEl: celeb ? (celeb.motif.gif
+        ? React.createElement('div', { style: { position: 'relative', background: '#FDFAF1', padding: '10px 10px 32px', transform: 'rotate(-3deg)', boxShadow: '0 10px 0 rgba(32,29,26,.28)', animation: 'cpPop .5s steps(5) both' } },
+            React.createElement('img', { src: celeb.motif.gif, alt: '', style: { width: '240px', height: '180px', objectFit: 'cover', display: 'block' } }),
+            React.createElement('div', { style: { position: 'absolute', left: 0, right: 0, bottom: '5px', textAlign: 'center', fontFamily: "'Yellowtail',cursive", fontSize: '17px', color: '#E0532F' } }, 'instant classic'))
+        : React.createElement('div', { style: { position: 'relative' } },
+            React.createElement('img', { src: celeb.motif.img, alt: '', style: { width: celeb.motif.w, animation: celeb.motif.anim, filter: 'drop-shadow(0 14px 14px rgba(32,29,26,.42))' } }),
+            celeb.motif.flash ? React.createElement('div', { style: { position: 'absolute', inset: '-60px', background: '#FDF6DC', animation: 'cpFlashbulb 1.6s linear both', pointerEvents: 'none' } }) : null)
+      ) : null,
+      celebTitle: celeb ? celeb.title : '', celebSub: celeb ? celeb.sub : '',
+      confetti: celeb ? celeb.confetti : [],
+      closeCeleb: () => { this.sfx('click'); this.set({ celeb: null }); },
+
+      // toast
+      toastOn: !!s.toast, toastMsg: s.toast || ''
+    };
+  }
+}
+</script>
+</body>
+</html>

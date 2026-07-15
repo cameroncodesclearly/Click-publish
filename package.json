@@ -1,0 +1,19 @@
+{
+  "name": "click-publish",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Click Publish — a social-media accountability app for creators (Clear Sky Creations).",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "node server.mjs",
+    "dev": "node server.mjs",
+    "serve:dist": "node server.mjs 5174"
+  },
+  "devDependencies": {
+    "@babel/standalone": "^7.29.7",
+    "playwright-core": "^1.61.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}
