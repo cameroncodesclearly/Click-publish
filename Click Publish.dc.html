@@ -2,7 +2,13 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#8FB8E8">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Click Publish">
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiQ2xpY2sgUHVibGlzaCIsInNob3J0X25hbWUiOiJDbGljayBQdWJsaXNoIiwiZGlzcGxheSI6InN0YW5kYWxvbmUiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiIzhGQjhFOCIsInRoZW1lX2NvbG9yIjoiIzhGQjhFOCIsInN0YXJ0X3VybCI6Ii4iLCJvcmllbnRhdGlvbiI6InBvcnRyYWl0IiwiZGVzY3JpcHRpb24iOiJBIHNvY2lhbC1tZWRpYSBhY2NvdW50YWJpbGl0eSBhcHAgZm9yIGNyZWF0b3JzLiJ9">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -37,12 +43,21 @@
   @keyframes cpDriftSlow{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
   @keyframes cpSmokeCycle{0%,19%{opacity:.95;}20%,100%{opacity:0;}}
   @keyframes cpSpin{to{transform:rotate(360deg);}}
+  /* Responsive shell: full-screen on phones, centered phone-card on desktop. */
+  html,body{height:100%;}
+  .cp-shell{min-height:100vh;min-height:100dvh;background:#F3EDE1;}
+  .cp-app{position:relative;width:100vw;height:100vh;height:100dvh;overflow:hidden;background:#F3EDE1;display:flex;flex-direction:column;}
+  @media (min-width:640px){
+    .cp-shell{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;
+      background:#8FB8E8 url('https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_182045_ca43f9bb-f0d2-4a06-8d08-52dc89a5d279.png') center/cover no-repeat;}
+    .cp-app{width:min(420px,100%);height:min(880px,94vh);border-radius:44px;
+      box-shadow:0 30px 70px rgba(0,0,0,.35),0 0 0 1px rgba(0,0,0,.12);}
+  }
 </style>
 </helmet>
 
-<div data-screen-label="Click Publish" style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:34px 16px;background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_39rpMQNGSy0kx6n9QMrDHutxiS0/hf_20260715_182045_ca43f9bb-f0d2-4a06-8d08-52dc89a5d279.png');background-size:cover;background-position:center;">
-<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" hint-size="430px,880px">
-<div style="position:relative;width:100%;height:100%;overflow:hidden;background:#F3EDE1;display:flex;flex-direction:column;font-family:'Archivo',sans-serif;color:#201D1A;">
+<div data-screen-label="Click Publish" class="cp-shell">
+<div class="cp-app" style="font-family:'Archivo',sans-serif;color:#201D1A;">
 
   <!-- ============ BOOT / LOADING GATE ============ -->
   <sc-if value="{{ isBoot }}" hint-placeholder-val="{{ false }}">
@@ -1089,7 +1104,6 @@
   </sc-if>
 
 </div>
-</x-import>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:520,&quot;height&quot;:940},&quot;skipOnboarding&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Prototype&quot;},&quot;celebrationStyle&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;surprise&quot;,&quot;memes&quot;,&quot;rocket&quot;,&quot;cowboy&quot;,&quot;lovers&quot;,&quot;jump&quot;,&quot;sunrise&quot;,&quot;paparazzi&quot;,&quot;headliner&quot;,&quot;plane&quot;,&quot;car&quot;],&quot;default&quot;:&quot;surprise&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Customization&quot;}}">
