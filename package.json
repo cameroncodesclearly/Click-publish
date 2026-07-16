@@ -7,8 +7,7 @@
   "scripts": {
     "build": "node build.mjs",
     "start": "node server.mjs",
-    "dev": "node server.mjs",
-    "serve:dist": "node server.mjs 5174"
+    "dev": "node server.mjs"
   },
   "devDependencies": {
     "@babel/standalone": "^7.29.7",
