@@ -20,7 +20,7 @@
 //
 // Run with:  npm run build
 
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { createRequire } from 'node:module';
 
 const require = createRequire(import.meta.url);
@@ -36,6 +36,30 @@ const safeInline = (js) => js.replace(/<\/script>/gi, '<\\/script>');
 const react = readFileSync(root + 'node_modules/react/umd/react.production.min.js', 'utf8');
 const reactDom = readFileSync(root + 'node_modules/react-dom/umd/react-dom.production.min.js', 'utf8');
 const support = readFileSync(root + 'support.js', 'utf8');
+const supabaseUmd = readFileSync(root + 'node_modules/@supabase/supabase-js/dist/umd/supabase.js', 'utf8');
+const cloud = readFileSync(root + 'cloud.js', 'utf8');
+
+// Front-end config: prefer Vercel env vars, else config.js, else the example.
+// (The anon key is a public client key; RLS is the security boundary.)
+let configJs;
+if (process.env.SUPABASE_URL && process.env.SUPABASE_ANON_KEY) {
+  configJs = 'window.CP_CONFIG={url:' + JSON.stringify(process.env.SUPABASE_URL) +
+    ',anonKey:' + JSON.stringify(process.env.SUPABASE_ANON_KEY) + '};';
+  log('config from SUPABASE_URL / SUPABASE_ANON_KEY env vars');
+} else if (existsSync(root + 'config.js')) {
+  configJs = readFileSync(root + 'config.js', 'utf8');
+  log('config from config.js');
+} else {
+  configJs = readFileSync(root + 'config.example.js', 'utf8');
+  log('WARNING: no config.js — using config.example.js (local-only mode until you add Supabase keys)');
+}
+
+// Create the Supabase client (skipped for placeholder config → local-only mode).
+// `window.sb ||` lets a test harness pre-inject a mock client before boot.
+const sbInit =
+  'try{window.sb=window.sb||((window.CP_CONFIG&&window.CP_CONFIG.url&&' +
+  '!/YOUR[-_]/.test(window.CP_CONFIG.url))?supabase.createClient(window.CP_CONFIG.url,window.CP_CONFIG.anonKey):null);}' +
+  'catch(e){console.error("[cloud] Supabase init failed",e);}';
 
 // ── 2. compile ios-frame.jsx (React classic runtime -> global `React`) ─────
 const Babel = require('@babel/standalone');
@@ -59,6 +83,11 @@ const inlined =
   // on boot. That self-parse would mis-read the inlined support.js source
   // (which contains <x-dc> patterns) and clobber the real template.
   '<script>window.__resources={};</script>\n' +
+  // Cloud stack: config → Supabase client lib → client init → CloudStore.
+  '<script>' + safeInline(configJs) + '</script>\n' +
+  '<script>' + safeInline(supabaseUmd) + '</script>\n' +
+  '<script>' + sbInit + '</script>\n' +
+  '<script>' + safeInline(cloud) + '</script>\n' +
   '<script>' + safeInline(react) + '</script>\n' +
   '<script>' + safeInline(reactDom) + '</script>\n' +
   '<script>' + safeInline(iosJs) + '</script>\n' +

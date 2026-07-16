@@ -4,3 +4,4 @@ scratch_*
 *.log
 .DS_Store
 vendor/
+config.js
