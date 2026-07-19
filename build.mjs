@@ -39,8 +39,14 @@ const support = readFileSync(root + 'support.js', 'utf8');
 const supabaseUmd = readFileSync(root + 'node_modules/@supabase/supabase-js/dist/umd/supabase.js', 'utf8');
 const cloud = readFileSync(root + 'cloud.js', 'utf8');
 
-// Front-end config: prefer Vercel env vars, else config.js, else the example.
-// (The anon key is a public client key; RLS is the security boundary.)
+// Front-end config: Supabase URL + anon (public) key.
+// The anon key is a publishable client key — safe to commit; Row Level
+// Security is the real security boundary. Baked in here so the deployed build
+// always connects, independent of Vercel env-var / branch settings.
+// Resolution order: env vars → local config.js override → these defaults.
+const DEFAULT_SUPABASE_URL = 'https://lqfakxhnjbezzzwuqkyk.supabase.co';
+const DEFAULT_SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxxZmFreGhuamJlenp6d3Vxa3lrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQyMDcxNzMsImV4cCI6MjA5OTc4MzE3M30.FRExJu9CVgletQ9o3j2s42nq6HfnOjqLXi_dCeyjKms';
+
 let configJs;
 if (process.env.SUPABASE_URL && process.env.SUPABASE_ANON_KEY) {
   configJs = 'window.CP_CONFIG={url:' + JSON.stringify(process.env.SUPABASE_URL) +
@@ -50,8 +56,9 @@ if (process.env.SUPABASE_URL && process.env.SUPABASE_ANON_KEY) {
   configJs = readFileSync(root + 'config.js', 'utf8');
   log('config from config.js');
 } else {
-  configJs = readFileSync(root + 'config.example.js', 'utf8');
-  log('WARNING: no config.js — using config.example.js (local-only mode until you add Supabase keys)');
+  configJs = 'window.CP_CONFIG={url:' + JSON.stringify(DEFAULT_SUPABASE_URL) +
+    ',anonKey:' + JSON.stringify(DEFAULT_SUPABASE_ANON_KEY) + '};';
+  log('config from baked-in defaults');
 }
 
 // Create the Supabase client (skipped for placeholder config → local-only mode).
